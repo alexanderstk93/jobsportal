@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 4rem;
+  color: white;
+  height: 6.5rem;
+  background-color: rgb(34, 36, 38);
+}
+
+.left-nav {
+  flex: 4;
+  cursor: pointer;
+}
+.left-nav a {
+  color: white;
+}
+.search-container {
+  width: 100%;
+  flex: 6;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 4;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bolder;
+}

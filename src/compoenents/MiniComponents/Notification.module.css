@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  padding: 1rem;
+  background-color: rgb(94, 94, 94);
+  border-radius: 0.5rem;
+  animation: pop-down 1.4s;
+}
+.container p {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.container h2 {
+  color: rgb(63, 186, 49);
+}
+
+.container img {
+  width: 70px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes pop-down {
+  from {
+    top: -2rem;
+  }
+  to {
+    top: 5rem;
+  }
+}
+.bar {
+  background-color: rgb(252, 151, 151);
+  width: 100%;
+  height: 1rem;
+  display: block;
+  animation: right-to-left 5.7s;
+}
+
+@keyframes pop-up {
+  from {
+    top: 5rem;
+  }
+  to {
+    top: -2rem;
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}

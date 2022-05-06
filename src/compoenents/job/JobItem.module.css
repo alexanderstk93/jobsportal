@@ -1,0 +1,72 @@
+.item {
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: rgb(34, 36, 38);
+  width: 60%;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0.5);
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
+}
+
+.job-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+.job-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.employer {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.topEmployer {
+  margin-left: 2rem;
+  background-color: rgb(244, 244, 26);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.topEmployer a {
+  text-decoration: none;
+  color: black;
+}
+
+.apply-button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: rgb(32, 209, 150);
+  cursor: pointer;
+  text-align: right;
+}
+
+.apply-button:hover {
+  animation: waveColor 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes waveColor {
+  0% {
+    left: 0;
+    background-color: rgb(32, 209, 150);
+  }
+
+  100% {
+    right: 100%;
+    background-color: rgb(7, 215, 49);
+  }
+}

@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  background-color: rgb(48, 48, 48);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.search img {
+  width: 60px;
+  margin-right: 1.5rem;
+}
+.search ::placeholder {
+  color: rgb(195, 195, 195);
+}
+.search input {
+  background-color: rgb(48, 48, 48);
+  border: none;
+  font-size: 2.3rem;
+  position: relative;
+  width: 90%;
+  color: white;
+}
+
+.search input:focus {
+  outline: none;
+}
