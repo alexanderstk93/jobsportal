@@ -67,7 +67,13 @@ export default function JobItem({
           Senior 4-6 years experience
         </p>
       </div>
-      <div className={styles["job-description"]}>
+      <div
+        className={
+          long
+            ? `${styles["job-description"]} ${styles["long"]}`
+            : styles["job-description"]
+        }
+      >
         {long ? description : description.slice(0, 250) + "..."}
       </div>
       <div className={styles.apply}>

@@ -10,7 +10,6 @@ import TopEmployerDescription from "./compoenents/topEmployer/TopEmployerDescrip
 import JobView from "./compoenents/jobview/JobView";
 import Notification from "./compoenents/MiniComponents/Notification";
 import AdminDashboard from "./compoenents/Admin/AdminDashboard";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(

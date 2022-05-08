@@ -20,6 +20,10 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+
+.job-description.long {
+  white-space: pre-line;
+}
 .employer {
   display: flex;
   align-items: center;

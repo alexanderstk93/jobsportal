@@ -5,12 +5,19 @@ import { useState } from "react";
 import JobItem from "../job/JobItem";
 import styles from "./JobView.module.css";
 import GoogleMaps from "./GoogleMaps";
+import { Marker } from "@react-google-maps/api";
 
 export default function JobView() {
   const { jobId } = useParams();
   const jobs = useSelector((state) => state.jobs);
   const jobFound = useRef({ found: false });
   const currentJob = useRef({});
+
+  const [showMarker, setShowMarker] = useState(false);
+
+  const showMarkerHandler = () => {
+    setShowMarker(true);
+  };
 
   const displayMoreFromThisEmployer = () => {
     const currentJobFilter = jobs.filter((job) => job.id === jobId);
@@ -21,6 +28,7 @@ export default function JobView() {
     });
     const relatedJobsAsItems = relatedJobsFilter.map((job) => (
       <JobItem
+        key={jobId}
         junior={job.level.junior}
         middle={job.level.middle}
         senior={job.level.senior}
@@ -47,6 +55,7 @@ export default function JobView() {
           <>
             <div className={styles["jobview-container"]}>
               <JobItem
+                key={jobId}
                 junior={jobs[i].level.junior}
                 middle={jobs[i].level.middle}
                 senior={jobs[i].level.senior}
@@ -72,16 +81,26 @@ export default function JobView() {
       }
     }
   };
-  console.log(jobFound);
+
   return (
     <div className={styles.jobview}>
       <div className={styles["job-selected"]}>{displayJobSelected()}</div>
       <span className={styles["informations-container"]}>
         {jobFound.current.found && (
+          <button
+            className={styles["find-location"]}
+            onClick={showMarkerHandler}
+            type="button"
+          >
+            Find Location
+          </button>
+        )}
+        {jobFound.current.found && (
           <GoogleMaps
             lat={currentJob.current[0].location.lat}
             lng={currentJob.current[0].location.lng}
-          />
+            showLocation={showMarker}
+          ></GoogleMaps>
         )}
       </span>
     </div>

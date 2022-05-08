@@ -2,7 +2,7 @@
   margin-top: 3rem;
   padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .jobview-container {
@@ -10,7 +10,7 @@
 }
 
 .job-selected {
-  width: 65%;
+  width: 70%;
 }
 .other-jobs {
   width: 60%;
@@ -22,6 +22,21 @@
 }
 
 .informations-container {
-  width: 600px;
-  height: 450px;
+  width: 370px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-location {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: aqua;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
