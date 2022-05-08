@@ -43,12 +43,14 @@ export default function JobList() {
         }
         return jobMatched;
       });
-      console.log(jobsToDisplay);
     } else {
       jobsToDisplay = jobsList;
     }
     jobsToDisplay = jobsToDisplay.map((job) => (
       <JobItem
+        junior={job.level.junior}
+        middle={job.level.middle}
+        senior={job.level.senior}
         key={job.id}
         id={job.id}
         title={job.title}
@@ -60,6 +62,6 @@ export default function JobList() {
 
     return jobsToDisplay;
   };
-
+  console.log(jobsList);
   return <ul>{loadJobItems()}</ul>;
 }

@@ -1,3 +1,27 @@
 .jobview {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobview-container {
+  flex: 1;
+}
+
+.job-selected {
+  width: 65%;
+}
+.other-jobs {
+  width: 60%;
+  margin-right: 5rem;
+}
+
+.other-jobs-message {
+  margin-bottom: 2rem;
+}
+
+.informations-container {
+  width: 600px;
+  height: 450px;
 }

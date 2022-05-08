@@ -23,6 +23,8 @@ const initialState = [
       - HTML/CSS
       - Seriosity
       - 3 years experience`,
+    level: { junior: true, middle: true, senior: false },
+    location: { lat: 44.4777, lng: 26.0805 },
   },
   {
     id: uuidv4(),
@@ -34,6 +36,7 @@ const initialState = [
       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
       ` +
       "Here are our requirements: - PHP Knowledge - HTML/CSS - Seriosity - 2 years experience",
+    level: { junior: false, middle: false, senior: true },
   },
   {
     id: uuidv4(),
@@ -47,6 +50,7 @@ const initialState = [
       - HTML/CSS
       - Seriosity
       - 1 year experience`,
+    level: { junior: false, middle: false, senior: true },
   },
   {
     id: uuidv4(),
@@ -60,6 +64,7 @@ const initialState = [
       - HTML/CSS
       - Seriosity
       - 1 year experience`,
+    level: { junior: true, middle: true, senior: false },
   },
 ];
 

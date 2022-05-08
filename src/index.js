@@ -7,9 +7,9 @@ import store from "./compoenents/store/store";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./compoenents/navigation/Navbar";
 import TopEmployerDescription from "./compoenents/topEmployer/TopEmployerDescription";
-import { useParams } from "react-router-dom";
 import JobView from "./compoenents/jobview/JobView";
 import Notification from "./compoenents/MiniComponents/Notification";
+import AdminDashboard from "./compoenents/Admin/AdminDashboard";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -21,6 +21,7 @@ root.render(
         <Notification />
         <Routes>
           <Route path={"/"} element={<App />} />
+          <Route path={"/admin"} element={<AdminDashboard />} />
           <Route path={"/jobview/:jobId"} element={<JobView />} />
           <Route path={"/topemployer"} element={<TopEmployerDescription />} />
           <Route path={"/profile"} element={<h1>Profile Page</h1>} />

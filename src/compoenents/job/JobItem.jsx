@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./JobItem.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeJob } from "../store/JobsSlice";
-import Notification from "../MiniComponents/Notification";
 import { changeStatus, changeApplied } from "../store/StatusSlice";
 
 export default function JobItem({
@@ -12,12 +11,15 @@ export default function JobItem({
   employer,
   description,
   topEmployer,
+  junior,
+  middle,
+  senior,
   long,
 }) {
   const topEmployerCard = <Link to={"/topemployer"}>Top Employer</Link>;
   const applied = useSelector((state) => state.status.applied);
   const dispatch = useDispatch();
-  console.log(applied);
+
   return (
     <div
       className={styles.item}
@@ -31,12 +33,39 @@ export default function JobItem({
       </Link>
       <div className={styles.employer}>
         <i>{employer}</i>
+
+        {/* Top Employer Card */}
+
         <div
           className={styles.topEmployer}
           style={!topEmployer ? { display: "none" } : null}
         >
           {topEmployer && topEmployerCard}
         </div>
+      </div>
+      {/* Skill Level */}
+
+      <div className={styles["skill-level"]}>
+        <p
+          className={styles.skill}
+          style={junior ? { display: "block" } : { display: "none" }}
+        >
+          Junior 0-2 years experience
+          {middle || senior ? "," : null}
+        </p>
+        <p
+          className={styles.skill}
+          style={middle ? { display: "block" } : { display: "none" }}
+        >
+          Middle 2-4 years experience
+          {senior ? "," : null}
+        </p>
+        <p
+          className={styles.skill}
+          style={senior ? { display: "block" } : { display: "none" }}
+        >
+          Senior 4-6 years experience
+        </p>
       </div>
       <div className={styles["job-description"]}>
         {long ? description : description.slice(0, 250) + "..."}

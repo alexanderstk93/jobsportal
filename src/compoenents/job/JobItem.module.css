@@ -1,14 +1,13 @@
 .item {
   color: white;
-  border: 1px solid black;
+  border: 0.5px solid rgb(31, 31, 31);
   border-radius: 0.5rem;
   margin: 0 auto;
   margin-bottom: 3rem;
   padding: 1rem;
   background-color: rgb(34, 36, 38);
-  width: 60%;
-  -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0.5);
-  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.9);
 }
 
 .job-title {
@@ -69,4 +68,14 @@
     right: 100%;
     background-color: rgb(7, 215, 49);
   }
+}
+
+.skill-level {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
 }
