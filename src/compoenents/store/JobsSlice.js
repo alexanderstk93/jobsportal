@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useMemo } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { topEmployers } from "./TopEmployers";
 
@@ -84,8 +85,10 @@ const initialState = [
     
     English (Required)
     Work Location: Remote`,
-    level: { junior: false, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    level: { junior: true, middle: true, senior: true },
+    location: { maps: { lat: 44.4268, lng: 26.1025 }, city: "Bucharest" },
+    salary: "2000-3000",
+    posts: "2",
   },
   {
     id: uuidv4(),
@@ -107,7 +110,9 @@ const initialState = [
     Technical roles with hands on technical and functional delivery expectations.
     Also, any AMS/Operate/ITIL experience is a nice to have.e`,
     level: { junior: true, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 51.5072, lng: 0.1276 }, city: "London" },
+    salary: "2500-3000",
+    posts: "3",
   },
   {
     id: uuidv4(),
@@ -229,7 +234,9 @@ const initialState = [
     
     NC State University participates in E-Verify. Federal law requires all employers to verify the identity and employment eligibility of all persons hired to work in the United States.`,
     level: { junior: true, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 19.4326, lng: 99.1332 }, city: "Mexico City" },
+    salary: "2000-2500",
+    posts: "1",
   },
   {
     id: uuidv4(),
@@ -286,7 +293,9 @@ const initialState = [
     
     Job Type: Full-time`,
     level: { junior: true, middle: false, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 34.0736, lng: 118.4004 }, city: "Beverly Hills" },
+    salary: "1700-2300",
+    posts: "1",
   },
   {
     id: uuidv4(),
@@ -433,7 +442,9 @@ const initialState = [
     
     The Company will not discharge or in any other manner discriminate against employees or applicants because they have inquired about, discussed, or disclosed their own pay or the pay of another employee or applicant. Additionally, employees who have access to the compensation information of other employees or applicants as a part of their essential job functions cannot disclose the pay of other employees or applicants to individuals who do not otherwise have access to compensation information, unless the disclosure is (a) in response to a formal complaint or charge, (b) in furtherance of an investigation, proceeding, hearing, or action, including an investigation conducted by the employer, or (c) consistent with the Company's legal duty to furnish information.`,
     level: { junior: true, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 52.52, lng: 13.405 }, city: "Berlin" },
+    salary: "2000-2200",
+    posts: "3",
   },
   {
     id: uuidv4(),
@@ -479,7 +490,9 @@ const initialState = [
     
     We are an equal employment opportunity employer (Females/Minorities/ Protected Veterans/Disabled), values the diversity of our workforce and the knowledge of our people.`,
     level: { junior: true, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 41.8781, lng: 87.6298 }, city: "Chicago" },
+    salary: "1000-3000",
+    posts: "4",
   },
   {
     id: uuidv4(),
@@ -492,7 +505,7 @@ const initialState = [
       ` +
       "Here are our requirements: - PHP Knowledge - HTML/CSS - Seriosity - 2 years experience",
     level: { junior: false, middle: false, senior: true },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 44.4268, lng: 26.1025 }, city: "Bucharest" },
   },
   {
     id: uuidv4(),
@@ -507,7 +520,9 @@ const initialState = [
       - Seriosity
       - 1 year experience`,
     level: { junior: false, middle: false, senior: true },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 52.52, lng: 13.405 }, city: "Berlin" },
+    salary: "2000-3000",
+    posts: "2",
   },
   {
     id: uuidv4(),
@@ -522,7 +537,9 @@ const initialState = [
       - Seriosity
       - 1 year experience`,
     level: { junior: true, middle: true, senior: false },
-    location: { lat: 44.4268, lng: 26.1025 },
+    location: { maps: { lat: 59.9139, lng: 10.7522 }, city: "Oslo" },
+    salary: "2000-3000",
+    posts: "2",
   },
 ];
 

@@ -1,0 +1,21 @@
+.container {
+  padding: 0.5rem;
+  background-color: rgb(183, 197, 255);
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  position: absolute;
+  right: 1rem;
+  width: 20%;
+  color: black;
+  font-weight: bold;
+}
+.container p {
+  border-bottom: 3px solid rgb(33, 33, 33);
+  text-align: center;
+}
+.salary {
+}
+.location {
+}
+.posts {
+}

@@ -8,6 +8,7 @@
   background-color: rgb(34, 36, 38);
   -webkit-box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.9);
   box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.9);
+  position: relative;
 }
 
 .job-title {
@@ -16,8 +17,17 @@
   font-weight: bold;
   margin-bottom: 0.7rem;
 }
+
+.title-and-informations-container {
+  display: flex;
+  justify-content: space-between;
+}
 .job-description {
   font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.job-description h1 {
   margin-bottom: 2rem;
 }
 
@@ -29,6 +39,7 @@
   align-items: center;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .topEmployer {
@@ -76,7 +87,17 @@
 
 .skill-level {
   display: flex;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+}
+
+.skill-level.long {
+  justify-content: center;
+  background-color: rgb(183, 197, 255);
+  border-radius: 1rem;
+  padding: 0.2rem;
+  font-weight: bold;
+  width: 67%;
+  color: black;
 }
 
 .skill {

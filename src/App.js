@@ -7,7 +7,7 @@ import { addList } from "./compoenents/store/JobsSlice";
 
 function App() {
   const dispatch = useDispatch();
-  console.log("sal");
+
   // const options = {
   //   method: "GET",
   //   headers: {

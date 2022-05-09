@@ -47,6 +47,9 @@ export default function JobView() {
                 description={jobs[i].description}
                 employer={jobs[i].employer}
                 topEmployer={jobs[i].topEmployer}
+                salary={jobs[i].salary}
+                location={jobs[i].location.city}
+                posts={jobs[i].posts}
                 long
                 others
               />
@@ -79,7 +82,7 @@ export default function JobView() {
       <div className={styles["job-selected"]}>{displayJobSelected()}</div>
       <span className={styles["informations-container"]}>
         {/* If jobFound.current.found is true, return a button to create a route between employee and employer location */}
-        {jobFound.current.found && (
+        {/* {jobFound.current.found && (
           <button
             className={styles["find-location"]}
             onClick={showMarkerHandler}
@@ -87,12 +90,12 @@ export default function JobView() {
           >
             Find Location
           </button>
-        )}
+        )} */}
         {/* If jobFound.current.found is true, return the google maps */}
         {jobFound.current.found && (
           <GoogleMaps
-            lat={currentJob.current[0].location.lat}
-            lng={currentJob.current[0].location.lng}
+            lat={currentJob.current[0].location.maps.lat}
+            lng={currentJob.current[0].location.maps.lng}
             showLocation={showMarker}
           ></GoogleMaps>
         )}
