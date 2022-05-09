@@ -3,9 +3,21 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import JobItem from "./JobItem";
 
+/* -------------------------------------------------
+
+This component will manage to render the list
+of job items <JobItem/> if the searchContent state is true
+it will filter the results and render the ones that match the searched words.
+An algorithm will separate the string in single words and will try to find this words
+in the title or description of the job. 
+
+------------------------------------------------- */
+
 export default function JobList() {
   const searchContent = useSelector((state) => state.status.search);
   const jobsList = useSelector((state) => state.jobs);
+
+  // In this array we'll push the keyWords from the search bar
   const keyWords = [];
 
   // We receive one string by 'searchContent', with this function we want to slice them to separate words
@@ -33,7 +45,6 @@ export default function JobList() {
       jobsToDisplay = jobsList.filter((job) => {
         let jobMatched = false;
         for (let keyWord of keyWords) {
-          console.log(keyWord);
           if (
             job.title.toLowerCase().includes(keyWord) ||
             job.description.toLowerCase().includes(keyWord)
@@ -62,6 +73,6 @@ export default function JobList() {
 
     return jobsToDisplay;
   };
-  console.log(jobsList);
+
   return <ul>{loadJobItems()}</ul>;
 }

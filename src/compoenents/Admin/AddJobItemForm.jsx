@@ -5,6 +5,14 @@ import { useDispatch } from "react-redux";
 import { addJob } from "../store/JobsSlice";
 import { v4 as uuidv4 } from "uuid";
 
+/* -------------------------------------------------
+
+This component is a form located at the path /admin
+after filling the form with information about the new job
+click post and it will be added to the store (redux)
+
+------------------------------------------------- */
+
 export default function AddJobItemForm() {
   const jobTitle = useRef("");
   const company = useRef("");

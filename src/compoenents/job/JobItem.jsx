@@ -5,6 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeJob } from "../store/JobsSlice";
 import { changeStatus, changeApplied } from "../store/StatusSlice";
 
+/* -------------------------------------------------
+
+This is the JobItem component, it will take the information
+from the redux store through props and create the job items.
+Than, the parents will display them as they want.
+This component is flexible, for example, has some properties like senior, middle, senior and long.
+If you put them as true, the item will load differently. 
+
+------------------------------------------------- */
+
 export default function JobItem({
   id,
   title,
@@ -35,7 +45,6 @@ export default function JobItem({
         <i>{employer}</i>
 
         {/* Top Employer Card */}
-
         <div
           className={styles.topEmployer}
           style={!topEmployer ? { display: "none" } : null}
@@ -43,8 +52,8 @@ export default function JobItem({
           {topEmployer && topEmployerCard}
         </div>
       </div>
-      {/* Skill Level */}
 
+      {/* Skill Level */}
       <div className={styles["skill-level"]}>
         <p
           className={styles.skill}
@@ -67,6 +76,8 @@ export default function JobItem({
           Senior 4-6 years experience
         </p>
       </div>
+
+      {/* Job Description */}
       <div
         className={
           long
@@ -76,6 +87,7 @@ export default function JobItem({
       >
         {long ? description : description.slice(0, 250) + "..."}
       </div>
+      {/* Apply Button */}
       <div className={styles.apply}>
         <button
           className={styles["apply-button"]}
