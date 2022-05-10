@@ -14,15 +14,13 @@ export default function JobFilter() {
 
   const deleteKeyWordHandler = (keyWord) => {
     dispatch(deleteKeyWord({ keyWord: keyWord }));
-    if (!keyWords) {
-      dispatch(changeSearch({ search: [] }));
-    }
+    // if (!keyWords) {
+    //   dispatch(changeSearch({ search: [] }));
+    // }
   };
 
   const addKeyWordHandler = (keyWord) => {
-    keyWords.includes(keyWord)
-      ? dispatch(deleteKeyWord({ keyWord: keyWord }))
-      : dispatch(addKeyWord({ keyWord: keyWord.toLowerCase() }));
+    dispatch(addKeyWord({ keyWord: keyWord.toLowerCase() }));
   };
   const loadKeyWordsList = () => {
     const liElements = keyWords.map((keyWord) => (
@@ -38,10 +36,13 @@ export default function JobFilter() {
       <div className={styles["input-container"]}>
         <input
           type="checkbox"
+          checked={keyWords.includes(city.toLowerCase()) ? true : false}
           value={city}
           id={city}
-          onClick={(e) => {
-            addKeyWordHandler(city);
+          onChange={(e) => {
+            e.target.checked
+              ? addKeyWordHandler(city)
+              : deleteKeyWordHandler(city);
           }}
         />
         <label htmlFor={city}>{city}</label>
@@ -58,7 +59,7 @@ export default function JobFilter() {
           <ul>{keyWords && loadKeyWordsList()}</ul>
         </div>
       </FilterCard>
-      <FilterCard height={"40%"} padding={"1rem"}>
+      <FilterCard height={"auto"} padding={"1rem"}>
         {loadCities()}
       </FilterCard>
     </div>

@@ -21,10 +21,10 @@ export const statusSlice = createSlice({
     },
 
     deleteKeyWord: (state, action) => {
-      const index = state.search.indexOf(action.payload.keyWord);
+      const index = state.search.indexOf(action.payload.keyWord.toLowerCase());
 
       state.search = state.search.filter(
-        (key) => key !== action.payload.keyWord
+        (key) => key !== action.payload.keyWord.toLowerCase()
       );
     },
   },

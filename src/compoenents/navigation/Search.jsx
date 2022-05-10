@@ -13,8 +13,7 @@ export default function Search() {
   // We receive one string by 'searchContent', with this function we want to slice them to separate words
   const onSearchHandler = (event) => {
     const keyWords = [];
-
-    if (event.key === "Enter" && search) {
+    if (event.key === "Enter") {
       let currentKeyWord = "";
       for (let i = 0; i < search.length; i++) {
         if (search[i] !== " ") {
@@ -29,7 +28,7 @@ export default function Search() {
       }
 
       dispatch(changeSearch({ search: keyWords }));
-    } else {
+    } else if (!search) {
       dispatch(changeSearch({ search: "" }));
     }
   };
@@ -48,7 +47,10 @@ export default function Search() {
         id=""
         placeholder="Search.."
         onKeyPress={onSearchHandler}
-        onChange={(e) => setSearch(e.target.value.trim().toLowerCase())}
+        onChange={(e) => {
+          if (!e.target.value) dispatch(changeSearch({ search: [] }));
+          else setSearch(e.target.value.trim().toLowerCase());
+        }}
       />
     </div>
   );

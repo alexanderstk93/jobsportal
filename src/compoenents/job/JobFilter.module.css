@@ -48,15 +48,15 @@
   border: none;
   background-color: rgb(34, 36, 38);
   margin-right: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 
 .input-container input:hover {
-  background-color: greenyellow;
+  background-color: rgb(32, 209, 150);
 }
 .input-container input:checked {
-  background-color: greenyellow;
+  background-color: rgb(32, 209, 150);
 }
 
 .input-container label {
