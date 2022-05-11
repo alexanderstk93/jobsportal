@@ -3,8 +3,10 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteKeyWord, addKeyWord, changeSearch } from "../store/StatusSlice";
 import FilterCard from "./FilterCard";
+import FilterOptionsCard from "./FilterOptionsCard";
 import styles from "./JobFilter.module.css";
 import { cities } from "./ListOfCities";
+import { skills } from "./ListOfSkills";
 
 export default function JobFilter() {
   const keyWords = useSelector((state) => state.status.search);
@@ -14,9 +16,6 @@ export default function JobFilter() {
 
   const deleteKeyWordHandler = (keyWord) => {
     dispatch(deleteKeyWord({ keyWord: keyWord }));
-    // if (!keyWords) {
-    //   dispatch(changeSearch({ search: [] }));
-    // }
   };
 
   const addKeyWordHandler = (keyWord) => {
@@ -24,31 +23,11 @@ export default function JobFilter() {
   };
   const loadKeyWordsList = () => {
     const liElements = keyWords.map((keyWord) => (
-      <li onClick={() => deleteKeyWordHandler(keyWord)}>
+      <li onClick={() => deleteKeyWordHandler(keyWord)} key={Math.random()}>
         {keyWord} {deleteIcon}
       </li>
     ));
     return liElements;
-  };
-
-  const loadCities = () => {
-    const citiesAsCheckbox = cities.map((city) => (
-      <div className={styles["input-container"]}>
-        <input
-          type="checkbox"
-          checked={keyWords.includes(city.toLowerCase()) ? true : false}
-          value={city}
-          id={city}
-          onChange={(e) => {
-            e.target.checked
-              ? addKeyWordHandler(city)
-              : deleteKeyWordHandler(city);
-          }}
-        />
-        <label htmlFor={city}>{city}</label>
-      </div>
-    ));
-    return citiesAsCheckbox;
   };
 
   return (
@@ -59,9 +38,8 @@ export default function JobFilter() {
           <ul>{keyWords && loadKeyWordsList()}</ul>
         </div>
       </FilterCard>
-      <FilterCard height={"auto"} padding={"1rem"}>
-        {loadCities()}
-      </FilterCard>
+      <FilterOptionsCard itemsToRender={cities} />
+      <FilterOptionsCard itemsToRender={skills} />
     </div>
   );
 }

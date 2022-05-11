@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addJob } from "../store/JobsSlice";
 import { v4 as uuidv4 } from "uuid";
+import Geocode from "react-geocode";
 
 /* -------------------------------------------------
 
@@ -17,10 +18,24 @@ export default function AddJobItemForm() {
   const jobTitle = useRef("");
   const company = useRef("");
   const description = useRef("");
+  const salary = useRef("");
+  const location = useRef("");
   const dispatch = useDispatch();
   const [juniorChecked, setJunior] = useState(false);
   const [middleChecked, setMiddle] = useState(false);
   const [seniorChecked, setSenior] = useState(false);
+
+  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+  Geocode.setLanguage("en");
+  Geocode.fromAddress("Bucharest").then(
+    (response) => {
+      const { lat, lng } = response.results[0].geometry.location;
+      console.log(lat, lng);
+    },
+    (error) => {
+      console.error(error);
+    }
+  );
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -35,6 +50,7 @@ export default function AddJobItemForm() {
           middle: middleChecked,
           senior: seniorChecked,
         },
+        location: {},
       })
     );
   };
@@ -54,6 +70,20 @@ export default function AddJobItemForm() {
       <div className={styles["input-container"]}>
         <label htmlFor="company">Company Name</label>
         <input ref={company} type="text" name="company" id="company" required />
+      </div>
+      <div ref={salary} className={styles["input-container"]}>
+        <label htmlFor="salary">Salary</label>
+        <input ref={company} type="text" name="salary" id="salary" required />
+      </div>
+      <div ref={location} className={styles["input-container"]}>
+        <label htmlFor="location">Location</label>
+        <input
+          ref={company}
+          type="text"
+          name="location"
+          id="location"
+          required
+        />
       </div>
       <div className={styles["checkbox-container"]}>
         <label htmlFor="junior">Junior</label>

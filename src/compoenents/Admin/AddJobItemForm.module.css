@@ -58,8 +58,8 @@
 }
 
 .checkbox-container input {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 20px;
   cursor: pointer;
 }

@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { applied: false, appliedTo: "", search: [] };
+const initialState = {
+  applied: false,
+  appliedTo: "",
+  search: [],
+};
 
 export const statusSlice = createSlice({
   name: "status",
@@ -14,7 +18,6 @@ export const statusSlice = createSlice({
     },
     changeSearch: (state, action) => {
       state.search = action.payload.search;
-      console.log(action.payload.search);
     },
     addKeyWord: (state, action) => {
       state.search.push(action.payload.keyWord);

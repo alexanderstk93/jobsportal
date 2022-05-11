@@ -30,35 +30,8 @@
   color: black;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   margin: 0.5rem 0.5rem;
   display: inline-block;
-}
-
-.input-container {
-  display: flex;
-  align-items: center;
-}
-
-.input-container input {
-  appearance: none;
-  height: 2rem;
-  width: 2rem;
-  border: none;
-  background-color: rgb(34, 36, 38);
-  margin-right: 2rem;
-  border-radius: 0.2rem;
-  cursor: pointer;
-}
-
-.input-container input:hover {
-  background-color: rgb(32, 209, 150);
-}
-.input-container input:checked {
-  background-color: rgb(32, 209, 150);
-}
-
-.input-container label {
-  font-size: 2rem;
 }

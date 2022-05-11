@@ -1,3 +1,3 @@
-const cities = ["Bucharest", "London", "Berlin", "Mexico City", "Oslo"];
+const cities = ["bucharest", "london", "berlin", "mexico city", "oslo"];
 
 export { cities };
