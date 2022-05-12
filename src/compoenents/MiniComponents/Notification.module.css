@@ -3,14 +3,14 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 5rem;
+  top: 3rem;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30rem;
   padding: 1rem;
   background-color: rgb(94, 94, 94);
   border-radius: 0.5rem;
-  animation: pop-down 1.4s;
+  /* animation: pop-down 1.4s; */
   z-index: 1;
 }
 .container p {

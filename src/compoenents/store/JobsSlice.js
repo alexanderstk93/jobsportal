@@ -94,7 +94,7 @@ const initialState = [
     id: uuidv4(),
     employer: APEXON,
     topEmployer: isTopEmployer(APEXON),
-    title: "PHP Developer",
+    title: "PHP Developer with Laravel & React Remote Job",
     description: `Our client is looking PHP Developer in long term project in Lake Mary, FL (Remote). Below are the detailed requirements.
 
     Job Title : PHP Developer

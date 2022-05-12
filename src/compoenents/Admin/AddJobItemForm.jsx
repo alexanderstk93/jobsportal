@@ -24,18 +24,18 @@ export default function AddJobItemForm() {
   const [juniorChecked, setJunior] = useState(false);
   const [middleChecked, setMiddle] = useState(false);
   const [seniorChecked, setSenior] = useState(false);
-
+  let latLongFromLocation = "";
   Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
   Geocode.setLanguage("en");
-  Geocode.fromAddress("Bucharest").then(
-    (response) => {
-      const { lat, lng } = response.results[0].geometry.location;
-      console.log(lat, lng);
-    },
-    (error) => {
-      console.error(error);
-    }
-  );
+  if (location.current.value)
+    Geocode.fromAddress(location.current.value).then(
+      (response) => {
+        latLongFromLocation = response.results[0].geometry.location;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -50,7 +50,13 @@ export default function AddJobItemForm() {
           middle: middleChecked,
           senior: seniorChecked,
         },
-        location: {},
+        location: {
+          maps: {
+            lat: +latLongFromLocation.lat,
+            lng: +latLongFromLocation.lng,
+          },
+          city: location.current.value,
+        },
       })
     );
   };
@@ -71,14 +77,14 @@ export default function AddJobItemForm() {
         <label htmlFor="company">Company Name</label>
         <input ref={company} type="text" name="company" id="company" required />
       </div>
-      <div ref={salary} className={styles["input-container"]}>
+      <div className={styles["input-container"]}>
         <label htmlFor="salary">Salary</label>
-        <input ref={company} type="text" name="salary" id="salary" required />
+        <input ref={salary} type="text" name="salary" id="salary" required />
       </div>
-      <div ref={location} className={styles["input-container"]}>
+      <div className={styles["input-container"]}>
         <label htmlFor="location">Location</label>
         <input
-          ref={company}
+          ref={location}
           type="text"
           name="location"
           id="location"

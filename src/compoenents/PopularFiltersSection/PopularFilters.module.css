@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container h2 {
+  margin-right: 2rem;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(154, 171, 251);
+  margin-right: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.container ul li:hover {
+  background: rgb(147, 163, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(147, 163, 247, 1) 0%,
+    rgba(255, 133, 189, 1) 100%
+  );
+}
