@@ -13,7 +13,7 @@
 
 .job-title {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.7rem;
 }
@@ -23,7 +23,6 @@
   justify-content: space-between;
 }
 .job-description {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -37,7 +36,7 @@
 .employer {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -46,7 +45,7 @@
   margin-left: 2rem;
   background-color: rgb(244, 244, 26);
   padding: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: bold;
   border-radius: 0.7rem;
   cursor: pointer;
@@ -61,7 +60,7 @@
   padding: 1rem 2rem;
   border-radius: 1rem;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   background-color: rgb(32, 209, 150);
   cursor: pointer;
@@ -101,6 +100,6 @@
 }
 
 .skill {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin-right: 0.5rem;
 }

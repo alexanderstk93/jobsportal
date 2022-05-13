@@ -8,8 +8,8 @@ export default function GoogleMaps({ lat, lng, showLocation }) {
 
   const zoomLevel = showLocation ? 18 : 15;
 
-  const center = useMemo(() => ({ lat: lat, lng: lng }), []);
-  
+  const center = { lat: lat, lng: lng };
+
   // Check if the google maps api was loaded.
   if (!isLoaded) {
     return <h2>Calculating Locations..</h2>;

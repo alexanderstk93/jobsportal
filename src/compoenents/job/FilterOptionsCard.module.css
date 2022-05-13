@@ -5,11 +5,11 @@
 
 .input-container input {
   appearance: none;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border: none;
   background-color: rgb(34, 36, 38);
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   margin-bottom: 0.3rem;
   margin-top: 0.3rem;
   border-radius: 0.2rem;
@@ -24,5 +24,5 @@
 }
 
 .input-container label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }

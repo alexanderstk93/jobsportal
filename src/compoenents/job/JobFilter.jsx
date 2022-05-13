@@ -32,8 +32,8 @@ export default function JobFilter() {
 
   return (
     <div className={styles.container}>
-      <h1>Filter</h1>
-      <FilterCard height={"auto"}>
+      <h2>Filter</h2>
+      <FilterCard minHeight={"30%"}>
         <div className={styles.keywords}>
           <ul>{keyWords && loadKeyWordsList()}</ul>
         </div>

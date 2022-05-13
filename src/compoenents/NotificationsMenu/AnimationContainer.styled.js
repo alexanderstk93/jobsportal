@@ -6,8 +6,8 @@ const AnimationContainer = styled.div`
   padding: 0.5rem;
   position: absolute;
   right: 0;
-  top: 6.5rem;
-  width: 22%;
+  top: 4.5rem;
+  width: 28%;
   background-color: rgb(52, 75, 94);
   border-radius: 0.5rem;
   min-height: 25rem;

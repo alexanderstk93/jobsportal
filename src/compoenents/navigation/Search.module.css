@@ -1,13 +1,13 @@
 .search {
-  display: flex;
+  align-items: center;
   background-color: rgb(48, 48, 48);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .search img {
-  width: 60px;
-  margin-right: 1.5rem;
+  width: 50px;
+  margin-right: 1.2rem;
 }
 .search ::placeholder {
   color: rgb(195, 195, 195);
@@ -15,10 +15,7 @@
 .search input {
   background-color: rgb(48, 48, 48);
   border: none;
-  font-size: 2.3rem;
-  position: relative;
-  padding: 0;
-  width: 90%;
+  font-size: 2rem;
   color: white;
 }
 

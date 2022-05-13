@@ -16,12 +16,13 @@
 }
 
 .container ul li {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.8rem;
   cursor: pointer;
   background-color: rgb(154, 171, 251);
   margin-right: 1rem;
+  margin-bottom: 0.3rem;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 0.5rem;
 }

@@ -14,12 +14,12 @@ export default function JobView() {
   const currentJob = useRef({});
   const currentJobFilter = jobs.filter((job) => job.id === jobId);
   currentJob.current = currentJobFilter;
-
+  window.scrollTo(0, 0);
   const [showMarker, setShowMarker] = useState(false);
 
   // Function to set the marker manually. Now is no longer used.
   const showMarkerHandler = () => {
-    setTimeout(() => setShowMarker(true), 2000);
+    setTimeout(() => setShowMarker(true), 1000);
   };
 
   // After loading the component first time, run a timeout of 2 seconds to locate the business location.
@@ -79,19 +79,13 @@ export default function JobView() {
 
   return (
     <div className={styles.jobview}>
-      <div className={styles["job-selected"]}>{displayJobSelected()}</div>
+      <div
+        className={styles["job-selected"]}
+        onChange={() => setShowMarker(false)}
+      >
+        {displayJobSelected()}
+      </div>
       <span className={styles["informations-container"]}>
-        {/* If jobFound.current.found is true, return a button to create a route between employee and employer location */}
-        {/* {jobFound.current.found && (
-          <button
-            className={styles["find-location"]}
-            onClick={showMarkerHandler}
-            type="button"
-          >
-            Find Location
-          </button>
-        )} */}
-        {/* If jobFound.current.found is true, return the google maps */}
         {jobFound.current.found && (
           <GoogleMaps
             lat={currentJob.current[0].location.maps.lat}
