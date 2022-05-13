@@ -25,7 +25,7 @@ export default function AddJobItemForm() {
   const [middleChecked, setMiddle] = useState(false);
   const [seniorChecked, setSenior] = useState(false);
   let latLongFromLocation = "";
-  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+  Geocode.setApiKey("AIzaSyDD9GO4BaG6xAQxa3WDZmiJhFhRBFrFqco");
   Geocode.setLanguage("en");
   if (location.current.value)
     Geocode.fromAddress(location.current.value).then(

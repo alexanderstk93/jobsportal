@@ -3,7 +3,7 @@ import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
 
 export default function GoogleMaps({ lat, lng, showLocation }) {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: "AIzaSyDD9GO4BaG6xAQxa3WDZmiJhFhRBFrFqco",
   });
 
   const zoomLevel = showLocation ? 18 : 15;

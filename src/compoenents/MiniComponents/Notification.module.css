@@ -6,10 +6,12 @@
   top: 3rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 18rem;
+  min-width: 25rem;
+  height: 5rem;
   padding: 0.5rem;
   background-color: rgb(94, 94, 94);
   border-radius: 0.5rem;
+  flex-wrap: nowrap;
   /* animation: pop-down 1.4s; */
 }
 .container p {
@@ -23,6 +25,7 @@
 
 .container img {
   width: 45px;
+  margin-right: 2rem;
 }
 
 .info {
