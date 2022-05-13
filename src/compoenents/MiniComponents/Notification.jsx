@@ -11,6 +11,7 @@ export default function Notification() {
     top: 3rem;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 5;
   `;
 
   const applied = useSelector((state) => state.status.applied);

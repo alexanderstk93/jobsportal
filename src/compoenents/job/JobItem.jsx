@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeJob } from "../store/JobsSlice";
 import { changeStatus, changeApplied } from "../store/StatusSlice";
 import JobInformationCard from "./JobInformationCard";
+import { addNotification } from "../store/NotificationsSlice";
 
 /* -------------------------------------------------
 
@@ -118,6 +119,12 @@ export default function JobItem({
           onClick={() => {
             dispatch(removeJob({ id: id }));
             dispatch(changeApplied({ title: title }));
+            dispatch(
+              addNotification({
+                title: `Your application was sent!`,
+                message: ` ${title}`,
+              })
+            );
             dispatch(changeStatus());
 
             setTimeout(() => {
