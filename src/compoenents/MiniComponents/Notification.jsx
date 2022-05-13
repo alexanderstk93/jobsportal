@@ -26,11 +26,15 @@ export default function Notification() {
         >
           <img src={require("../assets/check.png")} alt="check" />
           <div className={styles.info}>
-            <p>Ati aplicat cu succes.</p>
-            <h2>{appliedTo}</h2>
+            <p>Succesfully applied.</p>
+            <h3>{appliedTo}</h3>
           </div>
         </div>
       </FadeAnimation>
+      <div
+        className={styles.bar}
+        style={applied ? { display: "block" } : { display: "none" }}
+      ></div>
     </>
   );
 }

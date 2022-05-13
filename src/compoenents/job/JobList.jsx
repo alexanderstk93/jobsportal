@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import styles from "./JobList.module.css";
 import JobItem from "./JobItem";
 import { cities } from "./ListOfCities";
 import { skills } from "./ListOfSkills";
@@ -19,10 +19,9 @@ export default function JobList() {
   // const searchContent = useSelector((state) => state.status.search);
   const jobsList = useSelector((state) => state.jobs);
   const keyWords = useSelector((state) => state.status.search);
-
+  let jobsToDisplay = [];
   // After slicing, we'll check if there is some search content, if it does, we'll load the filtered jobs. If not, all of them.
   const loadJobItems = () => {
-    let jobsToDisplay = [];
     if (keyWords.length > 0) {
       // Filter cities from keyWords, so we get the best results for users.
       const citiesFilters = cities.filter((city) =>
@@ -146,8 +145,15 @@ export default function JobList() {
       />
     ));
     // RETURN THE JOBITEMS FINAL LIST
-    return jobsToDisplay;
   };
-
-  return <ul>{loadJobItems()}</ul>;
+  loadJobItems();
+  return (
+    <ul>
+      <h3 className={styles.jobsFound}>
+        Jobs found:
+        {` ${jobsToDisplay.length}`}
+      </h3>
+      {jobsToDisplay}
+    </ul>
+  );
 }
