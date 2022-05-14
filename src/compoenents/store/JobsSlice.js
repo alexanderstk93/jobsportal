@@ -506,6 +506,7 @@ const initialState = [
       "Here are our requirements: - PHP Knowledge - HTML/CSS - Seriosity - 2 years experience",
     level: { junior: false, middle: false, senior: true },
     location: { maps: { lat: 44.4268, lng: 26.1025 }, city: "Bucharest" },
+    posts: "1",
   },
   {
     id: uuidv4(),

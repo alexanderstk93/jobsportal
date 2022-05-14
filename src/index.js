@@ -10,6 +10,7 @@ import TopEmployerDescription from "./compoenents/topEmployer/TopEmployerDescrip
 import JobView from "./compoenents/jobview/JobView";
 import Notification from "./compoenents/MiniComponents/Notification";
 import AdminDashboard from "./compoenents/Admin/AdminDashboard";
+import Profile from "./compoenents/Profile/Profile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,7 +25,7 @@ root.render(
           <Route path={"/admin"} element={<AdminDashboard />} />
           <Route path={"/jobview/:jobId"} element={<JobView />} />
           <Route path={"/topemployer"} element={<TopEmployerDescription />} />
-          <Route path={"/profile"} element={<h1>Profile Page</h1>} />
+          <Route path={"/profile"} element={<Profile />} />
           <Route
             path="*"
             element={<h1>Page not found. Maybe check your request..?</h1>}
@@ -34,7 +35,3 @@ root.render(
     </React.StrictMode>
   </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

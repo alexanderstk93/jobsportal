@@ -15,6 +15,9 @@ export default function Navbar() {
 
   return (
     <div className={styles.navbar}>
+      <Link style={{ textDecoration: "none", color: "white" }} to="/admin">
+        Admin
+      </Link>
       <div className={styles["left-nav"]}>
         <Link className={styles.logo} to="/">
           <img src={require("../assets/logo.png")} alt="" />
