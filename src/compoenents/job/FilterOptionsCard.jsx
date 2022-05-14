@@ -3,7 +3,7 @@ import styles from "./FilterOptionsCard.module.css";
 import FilterCard from "./FilterCard";
 import { useSelector, useDispatch } from "react-redux";
 import { addKeyWord, deleteKeyWord } from "../store/StatusSlice";
-export default function FilterOptionsCard({ itemsToRender }) {
+export default function FilterOptionsCard({ itemsToRender, title }) {
   const keyWords = useSelector((state) => state.status.search);
   const dispatch = useDispatch();
 
@@ -28,8 +28,13 @@ export default function FilterOptionsCard({ itemsToRender }) {
   };
 
   return (
-    <FilterCard height={"auto"} padding={"1rem"}>
-      {loadFilterItems()}
-    </FilterCard>
+    <>
+      <h2>
+        <i>{title}</i>
+      </h2>
+      <FilterCard height={"auto"} padding={"1rem"}>
+        {loadFilterItems()}
+      </FilterCard>
+    </>
   );
 }

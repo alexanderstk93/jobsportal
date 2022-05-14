@@ -32,14 +32,16 @@ export default function JobFilter() {
 
   return (
     <div className={styles.container}>
-      <h2>Filter</h2>
+      <h2>
+        <i>Filter</i>
+      </h2>
       <FilterCard minHeight={"30%"}>
         <div className={styles.keywords}>
           <ul>{keyWords && loadKeyWordsList()}</ul>
         </div>
       </FilterCard>
-      <FilterOptionsCard itemsToRender={cities} />
-      <FilterOptionsCard itemsToRender={skills} />
+      <FilterOptionsCard itemsToRender={cities} title={"City"} />
+      <FilterOptionsCard itemsToRender={skills} title={"Experience"} />
     </div>
   );
 }

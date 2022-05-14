@@ -16,11 +16,9 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles["left-nav"]}>
-        <i>
-          <Link className={styles.logo} to="/">
-            Jobs Portal
-          </Link>
-        </i>
+        <Link className={styles.logo} to="/">
+          <img src={require("../assets/logo.png")} alt="" />
+        </Link>
       </div>
       <div className={styles["search-container"]}>
         <Search />

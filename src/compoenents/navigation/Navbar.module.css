@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 3;
-  opacity: 98%;
+  opacity: 96%;
 }
 
 .left-nav {
@@ -17,6 +17,10 @@
 }
 .left-nav a {
   color: white;
+}
+.left-nav img {
+  width: 170px;
+  margin-left: 2rem;
 }
 .search-container {
   flex: 6;
