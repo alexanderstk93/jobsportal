@@ -12,9 +12,16 @@ export default function Navbar() {
   const visibleNotificationsHandler = () => {
     setIsActive((state) => !state);
   };
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWidth(window.innerWidth));
 
   return (
-    <div className={styles.navbar}>
+    <div
+      className={styles.navbar}
+      style={
+        width > 1100 ? { visibility: "visible" } : { visibility: "hidden" }
+      }
+    >
       <Link style={{ textDecoration: "none", color: "white" }} to="/admin">
         Admin
       </Link>

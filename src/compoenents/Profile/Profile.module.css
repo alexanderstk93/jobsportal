@@ -1,17 +1,4 @@
 .container {
-  display: flex;
-  justify-content: space-between;
   padding: 2rem 2rem;
   width: 100%;
-}
-
-.left-side {
-  border: 1px solid white;
-  flex: 6;
-  margin-right: 2rem;
-}
-
-.right-side {
-  border: 1px solid white;
-  flex: 3;
 }

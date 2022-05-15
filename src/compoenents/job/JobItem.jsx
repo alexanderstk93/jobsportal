@@ -108,7 +108,6 @@ export default function JobItem({
             : styles["job-description"]
         }
       >
-        {" "}
         {long ? <h1>Full Description</h1> : null}
         {long ? description : description.slice(0, 250) + "..."}
       </div>

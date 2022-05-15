@@ -23,7 +23,7 @@
 .input-container input {
   background-color: rgb(65, 72, 74);
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border-radius: 1rem;
   outline: rgb(255, 255, 255);
   color: white;
@@ -32,7 +32,7 @@
 }
 
 .input-container label {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -58,8 +58,8 @@
 }
 
 .checkbox-container input {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -69,9 +69,9 @@
 }
 
 .submit {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: rgb(58, 238, 178);
   border: none;
   cursor: pointer;

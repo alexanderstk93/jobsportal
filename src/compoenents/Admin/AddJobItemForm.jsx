@@ -39,6 +39,7 @@ export default function AddJobItemForm() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log(salary.current.value);
     dispatch(
       addJob({
         id: uuidv4(),
@@ -50,6 +51,7 @@ export default function AddJobItemForm() {
           middle: middleChecked,
           senior: seniorChecked,
         },
+        salary: salary.current.value,
         location: {
           maps: {
             lat: +latLongFromLocation.lat,
