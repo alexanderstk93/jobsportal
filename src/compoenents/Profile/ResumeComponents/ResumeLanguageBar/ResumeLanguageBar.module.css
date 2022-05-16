@@ -1,0 +1,29 @@
+.languages {
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.languages-container {
+  display: flex;
+  flex: 5;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.5rem 0rem;
+}
+.languages-container:hover {
+  background-color: rgb(48, 50, 51);
+  border-radius: 0.5rem;
+}
+
+.languages-container p {
+  font-size: 1.2rem;
+}
+
+.languages-container img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}

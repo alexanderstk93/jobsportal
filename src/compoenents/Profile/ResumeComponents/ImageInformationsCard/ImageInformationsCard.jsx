@@ -1,5 +1,5 @@
 import React from "react";
-import UniversalCard from "./UniversalCard";
+import UniversalCard from "../UniversalCard/UniversalCard";
 import styles from "./ImageInformationsCard.module.css";
 import { useSelector } from "react-redux";
 
@@ -10,7 +10,7 @@ export default function ImageInformationsCard() {
     <UniversalCard>
       <div className={styles.container}>
         <div className={styles["profile-image-container"]}>
-          <img src={require("../../assets/the-rock.png")} alt="" />
+          <img src={require("../../../assets/the-rock.png")} alt="" />
           <h2>
             <i>{resumeDetails.name}</i>
           </h2>
@@ -20,13 +20,13 @@ export default function ImageInformationsCard() {
         </div>
         <div className={styles["informations"]}>
           <div className={styles["informations-container"]}>
-            <img src={require("../../assets/phone-42-64.png")} alt="" />
+            <img src={require("../../../assets/phone-42-64.png")} alt="" />
             <p>
               <i>{resumeDetails.phoneNumber}</i>
             </p>
           </div>
           <div className={styles["informations-container"]}>
-            <img src={require("../../assets/comments-64.png")} alt="" />
+            <img src={require("../../../assets/comments-64.png")} alt="" />
             <p>
               <i>{resumeDetails.email}</i>
             </p>

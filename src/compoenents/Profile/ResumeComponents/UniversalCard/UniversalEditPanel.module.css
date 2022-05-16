@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(34, 36, 38);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  width: 50%;
+  height: auto;
+  z-index: 2;
+}
+.container h2 {
+  margin-bottom: 2.5rem;
+}
+.children-and-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.children {
+  width: 60%;
+}
+
+.info {
+  width: 35%;
+}

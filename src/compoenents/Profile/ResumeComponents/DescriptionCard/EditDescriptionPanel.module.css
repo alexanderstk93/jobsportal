@@ -1,0 +1,30 @@
+.edit-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 90%;
+}
+
+.edit-description textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  background-color: rgb(34, 36, 38);
+  color: white;
+  resize: none;
+  min-height: 20rem;
+  outline: 2px solid white;
+}
+
+.edit-description button {
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  background-color: rgb(115, 214, 237);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}

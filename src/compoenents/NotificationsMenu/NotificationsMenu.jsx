@@ -1,15 +1,10 @@
 import React from "react";
 import styles from "./NotificationsMenu.module.css";
 import { AnimationContainer } from "./AnimationContainer.styled";
-import { useDispatch, useSelector } from "react-redux";
-import { addNotification } from "../store/NotificationsSlice";
+import { useSelector } from "react-redux";
 
-export default function NotificationsMenu({
-  isActive,
-}) {
+export default function NotificationsMenu({ isActive }) {
   const getNotifications = useSelector((state) => state.notifications);
-  console.log(getNotifications);
-  const dispatch = useDispatch();
 
   const loadNotifications = () => {
     const notifications = getNotifications.map((notification) => (
@@ -19,7 +14,12 @@ export default function NotificationsMenu({
           <h3>
             <i>{notification.title}</i>
           </h3>
-          <p>{notification.message}</p>
+          <div className={styles["message-and-time"]}>
+            <p>{notification.message}</p>
+            <span>
+              <i>{notification.time}</i>
+            </span>
+          </div>
         </div>
       </div>
     ));

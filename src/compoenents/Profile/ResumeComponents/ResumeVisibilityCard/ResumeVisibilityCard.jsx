@@ -1,5 +1,5 @@
 import React from "react";
-import UniversalCard from "./UniversalCard";
+import UniversalCard from "../UniversalCard/UniversalCard";
 import styles from "./ResumeVisibility.module.css";
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
