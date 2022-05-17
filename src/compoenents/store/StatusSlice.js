@@ -20,7 +20,6 @@ export const statusSlice = createSlice({
       state.search = action.payload.search;
     },
     addKeyWord: (state, action) => {
-      console.log("da");
       const filterCheck = state.search.filter(
         (keyWord) => keyWord === action.payload.keyWord
       );

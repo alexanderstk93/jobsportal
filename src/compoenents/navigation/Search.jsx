@@ -7,13 +7,17 @@ import { useSelector } from "react-redux";
 export default function Search() {
   const location = useLocation();
   const dispatch = useDispatch();
+
+  const [myState, setState] = useState(false);
+
   const keyWordsFromStore = useSelector((state) => state.status.search);
+
   const [search, setSearch] = useState("");
 
   // We receive one string by 'searchContent', with this function we want to slice them to separate words
   const onSearchHandler = (event) => {
     const keyWords = [];
-    if (event.key === "Enter") {
+    if (event.key === "Enter") { 
       let currentKeyWord = "";
       for (let i = 0; i < search.length; i++) {
         if (search[i] !== " ") {

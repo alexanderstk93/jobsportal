@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -28,7 +28,6 @@
 }
 
 .container ul li:hover {
-  background: rgb(147, 163, 247);
   background: linear-gradient(
     90deg,
     rgba(147, 163, 247, 1) 0%,

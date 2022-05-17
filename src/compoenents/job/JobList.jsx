@@ -38,7 +38,7 @@ export default function JobList() {
           ? true
           : false
       );
-
+      console.log(citiesFilters);
       // FILTER JOB FOR SEARCH FILTERS
       const filterJobToMatchSearchFilters = (job) => {
         for (let searchFilter of searchFilters) {
@@ -52,7 +52,7 @@ export default function JobList() {
       // FILTER JOB FOR CITY FILTERS
       const filterJobToMatchCityFilters = (job) => {
         for (let city of citiesFilters) {
-          return job.location.city.toLowerCase() === city;
+          if (job.location.city.toLowerCase() === city) return true;
         }
       };
 
