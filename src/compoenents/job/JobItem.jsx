@@ -124,11 +124,7 @@ export default function JobItem({
                 message: ` ${title}`,
               })
             );
-            dispatch(changeStatus());
-
-            setTimeout(() => {
-              dispatch(changeStatus());
-            }, 3000);
+            dispatch(changeStatus(true));
           }}
         >
           Apply

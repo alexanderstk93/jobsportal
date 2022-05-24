@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   applied: false,
+  changesSaved: false,
   appliedTo: "",
   search: [],
 };
@@ -10,11 +11,14 @@ export const statusSlice = createSlice({
   name: "status",
   initialState,
   reducers: {
-    changeStatus: (state) => {
-      state.applied = !state.applied;
+    changeStatus: (state, action) => {
+      state.applied = action.payload;
     },
     changeApplied: (state, action) => {
       state.appliedTo = action.payload.title;
+    },
+    switchChangesSaved: (state, action) => {
+      state.changesSaved = action.payload;
     },
     changeSearch: (state, action) => {
       state.search = action.payload.search;
@@ -39,6 +43,7 @@ export const statusSlice = createSlice({
 export const {
   changeStatus,
   changeApplied,
+  switchChangesSaved,
   changeSearch,
   deleteKeyWord,
   addKeyWord,

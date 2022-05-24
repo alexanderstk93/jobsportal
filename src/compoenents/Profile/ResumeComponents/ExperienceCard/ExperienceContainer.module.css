@@ -1,0 +1,14 @@
+.container {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.container h2,
+.company-and-city {
+  margin-bottom: 0.5rem;
+}
+
+.job-description {
+  color: rgb(186, 186, 186);
+}

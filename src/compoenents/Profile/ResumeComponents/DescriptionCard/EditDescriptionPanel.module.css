@@ -17,7 +17,10 @@
   color: white;
   resize: none;
   min-height: 20rem;
-  outline: 2px solid white;
+  outline: 2px solid rgb(55, 57, 58);
+  border: none;
+  -webkit-box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.5);
 }
 
 .edit-description button {

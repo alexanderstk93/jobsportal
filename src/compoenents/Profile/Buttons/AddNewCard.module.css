@@ -1,0 +1,13 @@
+.addButton {
+  margin: 2rem auto 0 auto;
+  background-color: rgb(99, 113, 183);
+  height: 3rem;
+  width: 13rem;
+  border: none;
+  border-radius: 0.5rem;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}

@@ -53,7 +53,18 @@ export default function ResumeVisibilityCard() {
           </div>
         </div>
         <button
-          onClick={() => setVisibility(!visibility)}
+          onClick={() => {
+            if (
+              visibility &&
+              window.confirm(
+                "We do not recommend to switch your CV as hidden. If you really want to, click ok."
+              )
+            ) {
+              setVisibility(!visibility);
+            } else if (!visibility) {
+              setVisibility(!visibility);
+            }
+          }}
           style={
             visibility
               ? { backgroundColor: "rgb(246,95,167)" }
