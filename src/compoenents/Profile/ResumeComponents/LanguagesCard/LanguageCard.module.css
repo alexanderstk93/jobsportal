@@ -1,0 +1,12 @@
+.container {
+  width: 20%;
+}
+
+.languageAndLevel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.languageAndLevel p {
+  color: rgb(182, 182, 182);
+}

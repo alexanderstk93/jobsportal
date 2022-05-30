@@ -1,7 +1,7 @@
 .container {
   border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 50%;
+  width: 100%;
 }
 
 .container h2,
@@ -10,5 +10,8 @@
 }
 
 .job-description {
-  color: rgb(186, 186, 186);
+  color: rgb(197, 197, 197);
+  text-align: justify;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }

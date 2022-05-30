@@ -26,11 +26,9 @@ export default function EditDescriptionPanel({ saveChanges }) {
   return (
     <UniversalEditPanel
       mainTitle={"Edit Description"}
-      title1={"What to complete here"}
       message1={
         "This section is used to describe your experiences, needs and future plans. Try to explain it as a big picture, don't go too far."
       }
-      title2={"Expert advice"}
       message2={
         "Briefly highlight your most important professional milestones, such as years of experience, your main qualifications and / or your most attractive qualities as an employee."
       }

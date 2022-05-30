@@ -5,6 +5,7 @@ const initialState = {
   changesSaved: false,
   appliedTo: "",
   search: [],
+  introStatus: false,
 };
 
 export const statusSlice = createSlice({
@@ -37,6 +38,9 @@ export const statusSlice = createSlice({
         (key) => key !== action.payload.keyWord.toLowerCase()
       );
     },
+    setIntroStatus: (state, action) => {
+      state.introStatus = true;
+    },
   },
 });
 
@@ -47,5 +51,6 @@ export const {
   changeSearch,
   deleteKeyWord,
   addKeyWord,
+  setIntroStatus,
 } = statusSlice.actions;
 export default statusSlice.reducer;

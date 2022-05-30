@@ -1,0 +1,45 @@
+.container {
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.inputContainer input {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+}
+.inputContainer label {
+  font-size: 1.3rem;
+}
+
+.addButton {
+  width: 35%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: rgb(99, 113, 183);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.abilities {
+  display: flex;
+  background-color: rgb(74, 81, 83);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid white;
+  flex-wrap: wrap;
+}
+
+.info {
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}

@@ -47,9 +47,8 @@ export default function Notification() {
         >
           <img src={require("../assets/check.png")} alt="check" />
           <div className={styles.info}>
-            <p>
-              {applied ? "Succesfully applied." : "Changes saved succesfully."}
-            </p>
+            <p>{applied && "Succesfully applied."}</p>
+            <p>{changesSaved && "Changes saved succesfully."}</p>
             {applied ? <h3>{appliedTo}</h3> : null}
           </div>
         </div>

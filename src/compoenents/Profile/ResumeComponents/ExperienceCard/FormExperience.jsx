@@ -36,15 +36,13 @@ export default function FormExperience({
       jobNameForm.current.value !== "" &&
       companyNameForm.current.value !== "" &&
       cityForm.current.value !== "" &&
-      jobDescriptionForm.current.value !== "" &&
-      window.confirm("Confirm action?");
+      jobDescriptionForm.current.value !== "";
     return valid;
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
     if (validFields()) {
-      dispatch(switchChangesSaved(true));
       dispatch(
         editWorkExperience({
           id: id,
@@ -138,8 +136,8 @@ export default function FormExperience({
       <div className={styles.controls}>
         {!newExperience && (
           <>
-            <SaveChangesButton onCLick={onSubmit}>Save</SaveChangesButton>
-            <RemoveItemButton onClick={onDelete}>Delete</RemoveItemButton>
+            <SaveChangesButton onClick={onSubmit} />
+            <RemoveItemButton onClick={onDelete} />
           </>
         )}
         {newExperience && <SaveNewItemFromFormButton onClick={onAddItem} />}

@@ -1,0 +1,47 @@
+.form {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border: 1px solid rgb(33, 35, 36);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  -webkit-box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 4px 20px -1px rgba(0, 0, 0, 0.5);
+  background-color: rgba(36, 36, 36, 0.521);
+}
+.form input {
+  margin-bottom: 1rem;
+  background-color: rgb(61, 64, 66);
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem;
+  outline: white;
+}
+.form label {
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputDateContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textAreaContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textAreaContainer textarea {
+  background-color: rgb(61, 64, 66);
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem;
+  outline: white;
+  resize: none;
+}

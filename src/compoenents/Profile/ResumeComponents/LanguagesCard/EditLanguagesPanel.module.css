@@ -1,0 +1,38 @@
+.activeLanguage {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.delete {
+  background-color: brown;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.addLanguage {
+  margin-top: 3rem;
+}
+.addLanguage label {
+  font-size: 1.3rem;
+  color: rgb(192, 192, 192);
+}
+
+.choicesContainer select {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.choicesContainer p {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}

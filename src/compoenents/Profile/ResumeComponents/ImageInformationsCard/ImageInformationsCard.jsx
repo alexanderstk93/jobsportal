@@ -10,7 +10,7 @@ export default function ImageInformationsCard() {
     <UniversalCard>
       <div className={styles.container}>
         <div className={styles["profile-image-container"]}>
-          <img src={require("../../../assets/the-rock.png")} alt="" />
+          <img src={require("../../../assets/therock.jpg")} alt="" />
           <h2>
             <i>{resumeDetails.name}</i>
           </h2>

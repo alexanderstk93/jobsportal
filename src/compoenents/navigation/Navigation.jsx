@@ -7,7 +7,7 @@ export default function Navigation({ visibleNotificationsHandler, isActive }) {
     <>
       <ul className={styles.navigation}>
         <li className={styles.profile}>
-          <img src={require("../assets/the-rock.png")} alt="the rock" />
+          <img src={require("../assets/therock.jpg")} alt="the rock" />
           <Link className={styles.profile} to={"/profile"}>
             Profile
           </Link>

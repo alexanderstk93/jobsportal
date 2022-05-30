@@ -27,9 +27,7 @@ export default function EditExperiencePanel({ workExperiences }) {
     <UniversalEditPanel
       // style={{ marginTop: "28rem" }}
       mainTitle={"Edit Work Experience"}
-      title1="What to complete here"
       message1="We recommend that you put here your related work experiences for the future employer."
-      title2="Experts Advice"
       message2="Dont lie! Very important if you really want to get a new job. Try to be explicit and give relatable informations. Don't forget to describe your experience."
     >
       {loadFormsExperience()}

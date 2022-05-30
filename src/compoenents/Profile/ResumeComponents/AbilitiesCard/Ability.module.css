@@ -1,0 +1,10 @@
+.container {
+  margin: 0.3rem 0.5rem;
+  background-color: rgb(99, 113, 183);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
