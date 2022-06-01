@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,8 +10,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(65, 72, 74, 0.95);
   color: white;
+}
+
+/* body,
+html {
+  overflow-x: hidden;
+} */
+/* 
+THIS MUST BE USED TO WORK 'OVERFLOW-X HIDDEN' AND RESOLVE A BUG WITCH COULD NOT LET HTML 
+TAG TO CUPPY THE ENTIRE WIDTH */
+
+#root {
+  position: absolute;
+  width: 100%;
   overflow-x: hidden;
 }
+
+/* 
+^^^^^^^^^^^^^^^^^^^^^^^^
+THIS MUST BE USED TO WORK 'OVERFLOW-X HIDDEN' AND RESOLVE A BUG WITCH COULD NOT LET HTML 
+TAG TO CUPPY THE ENTIRE WIDTH */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

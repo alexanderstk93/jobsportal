@@ -16,13 +16,13 @@ export default function Main() {
       dispatch(setIntroStatus(true));
     }, 5000);
   }
-
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWidth(window.innerWidth));
+  console.log(width);
   return (
     <div className={styles.main}>
       {!introLoaded && <WelcomeSlider />}
-      <div className={styles.left}>
-        <JobFilter />
-      </div>
+      <div className={styles.left}>{width >= 1020 && <JobFilter />}</div>
       <div className={styles.mid}>
         <PopularFilters />
         <JobList />

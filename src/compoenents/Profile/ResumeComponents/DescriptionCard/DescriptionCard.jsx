@@ -10,17 +10,13 @@ export default function DescriptionCard() {
   const description = useSelector((state) => state.resume.description);
   const [showEditPanel, setShowEditPanel] = useState(false);
 
-  const saveChanges = () => {
-    setShowEditPanel((state) => !state);
-  };
-
   return (
     <UniversalCard
       title={"Description"}
       withEditButton={() => setShowEditPanel((state) => !state)}
     >
       <div className={styles.description}>{description}</div>
-      {showEditPanel && <EditDescriptionPanel saveChanges={saveChanges} />}
+      {showEditPanel && <EditDescriptionPanel  />}
       {showEditPanel && (
         <Backdrop onClick={() => setShowEditPanel((state) => !state)} />
       )}

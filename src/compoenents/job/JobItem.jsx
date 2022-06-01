@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./JobItem.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,6 +34,10 @@ export default function JobItem({
   const topEmployerCard = <Link to={"/topemployer"}>Top Employer</Link>;
   const applied = useSelector((state) => state.status.applied);
   const dispatch = useDispatch();
+  const [toGoIconVisible, setToGoIconVisible] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWidth(window.innerWidth));
 
   //Create Skill Element (p tag) if the conditions are met
   const loadSkillElement = (level) => {
@@ -66,7 +70,22 @@ export default function JobItem({
           to={`/jobview/${id}`}
           style={{ textDecoration: "none", color: "black" }}
         >
-          <div className={styles["job-title"]}>{title}</div>
+          <div
+            className={styles["job-title"]}
+            onMouseEnter={() => setToGoIconVisible(true)}
+            onMouseLeave={() => setToGoIconVisible(false)}
+          >
+            {title}
+            <img
+              src={require("../assets/resize-icon.png")}
+              alt=""
+              style={
+                toGoIconVisible
+                  ? { visibility: "visible" }
+                  : { visibility: "hidden" }
+              }
+            />
+          </div>
         </Link>
         {long ? (
           <JobInformationCard

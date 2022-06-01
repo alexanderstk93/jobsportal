@@ -17,10 +17,10 @@
 }
 
 .input-container input:hover {
-  background-color: rgb(32, 209, 150);
+  background-color: rgb(153, 150, 252);
 }
 .input-container input:checked {
-  background-color: rgb(32, 209, 150);
+  background-color: rgb(153, 150, 252);
 }
 
 .input-container label {

@@ -4,6 +4,7 @@ import { addLanguage, removeLanguage } from "../../../store/ResumeSlice";
 import UniversalEditPanel from "../UniversalCard/UniversalEditPanel";
 import styles from "./EditLanguagesPanel.module.css";
 import SaveChangesButton from "../../Buttons/SaveChangesButton";
+import { switchChangesSaved } from "../../../store/StatusSlice";
 
 export default function EditLanguagesPanel() {
   const languages = useSelector((state) => state.resume.languagesKnown);
@@ -72,14 +73,24 @@ export default function EditLanguagesPanel() {
           </select>
         </div>
         <SaveChangesButton
-          onClick={() =>
-            dispatch(
-              addLanguage({
-                language: languageSelected.current.value,
-                level: levelSelected.current.value,
-              })
-            )
-          }
+          onClick={() => {
+            if (
+              languages.filter(
+                (language) =>
+                  language.language === languageSelected.current.value
+              ).length === 0
+            ) {
+              dispatch(
+                addLanguage({
+                  language: languageSelected.current.value,
+                  level: levelSelected.current.value,
+                })
+              );
+              dispatch(switchChangesSaved(true));
+            } else {
+              window.alert("Language already added.");
+            }
+          }}
         />
       </div>
     </UniversalEditPanel>

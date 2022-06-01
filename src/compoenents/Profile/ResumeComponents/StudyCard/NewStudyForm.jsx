@@ -7,6 +7,7 @@ import SaveNewItemFromFormButton from "../UniversalCard/SaveNewItemFromFormButto
 import UniversalCard from "../UniversalCard/UniversalCard";
 import UniversalEditPanel from "../UniversalCard/UniversalEditPanel";
 import styles from "./NewStudyForm.module.css";
+import { switchChangesSaved } from "../../../store/StatusSlice";
 
 export default function NewStudyForm({
   id,
@@ -46,6 +47,7 @@ export default function NewStudyForm({
         description: descriptionForm.current.value,
       })
     );
+    dispatch(switchChangesSaved(true));
   };
 
   const defaultValues = newStudy

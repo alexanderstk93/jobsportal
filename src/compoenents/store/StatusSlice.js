@@ -6,6 +6,7 @@ const initialState = {
   appliedTo: "",
   search: [],
   introStatus: false,
+  
 };
 
 export const statusSlice = createSlice({
@@ -25,9 +26,12 @@ export const statusSlice = createSlice({
       state.search = action.payload.search;
     },
     addKeyWord: (state, action) => {
-      const filterCheck = state.search.filter(
-        (keyWord) => keyWord === action.payload.keyWord
-      );
+      let filterCheck = [];
+      if (state.search.length > 1) {
+        filterCheck = state.search.filter(
+          (keyWord) => keyWord === action.payload.keyWord
+        );
+      }
       if (filterCheck.length === 0) state.search.push(action.payload.keyWord);
     },
 

@@ -18,7 +18,7 @@
 .container ul li {
   padding: 0.3rem 0.8rem;
   cursor: pointer;
-  background-color: rgb(154, 171, 251);
+  background-color: rgb(143, 140, 249);
   margin-right: 1rem;
   margin-bottom: 0.3rem;
   color: black;
@@ -29,8 +29,8 @@
 
 .container ul li:hover {
   background: linear-gradient(
-    90deg,
-    rgba(147, 163, 247, 1) 0%,
+    35deg,
+    rgb(143, 140, 249) 0%,
     rgba(255, 133, 189, 1) 100%
   );
 }

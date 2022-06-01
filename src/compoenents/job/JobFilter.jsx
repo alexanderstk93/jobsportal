@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteKeyWord, addKeyWord, changeSearch } from "../store/StatusSlice";
@@ -30,8 +30,11 @@ export default function JobFilter() {
     return liElements;
   };
 
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWidth(window.innerWidth));
+
   return (
-    <div className={styles.container}>
+    <div className={width <= 1000 ? styles.mobile : styles.container}>
       <h2>
         <i>Filter</i>
       </h2>

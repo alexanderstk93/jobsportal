@@ -7,8 +7,9 @@ import { editDescription } from "../../../store/ResumeSlice";
 import { addNotification } from "../../../store/NotificationsSlice";
 import InfoMessages from "../InfoMessages/InfoMessages";
 import UniversalEditPanel from "../UniversalCard/UniversalEditPanel";
+import { switchChangesSaved } from "../../../store/StatusSlice";
 
-export default function EditDescriptionPanel({ saveChanges }) {
+export default function EditDescriptionPanel() {
   const description = useSelector((state) => state.resume.description);
   const descriptionRef = useRef();
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export default function EditDescriptionPanel({ saveChanges }) {
         message: "You updated your description details.",
       })
     );
+    dispatch(switchChangesSaved(true));
   };
 
   return (
@@ -44,7 +46,7 @@ export default function EditDescriptionPanel({ saveChanges }) {
         <button
           onClick={() => {
             submitChangesHandler();
-            saveChanges();
+            dispatch(switchChangesSaved(true));
           }}
           type="button"
         >

@@ -3,21 +3,17 @@ import styles from "./Search.module.css";
 import { useDispatch } from "react-redux";
 import { changeSearch } from "../store/StatusSlice";
 import { useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+
 export default function Search() {
   const location = useLocation();
   const dispatch = useDispatch();
-
-  const [myState, setState] = useState(false);
-
-  const keyWordsFromStore = useSelector((state) => state.status.search);
 
   const [search, setSearch] = useState("");
 
   // We receive one string by 'searchContent', with this function we want to slice them to separate words
   const onSearchHandler = (event) => {
     const keyWords = [];
-    if (event.key === "Enter") { 
+    if (event.key === "Enter") {
       let currentKeyWord = "";
       for (let i = 0; i < search.length; i++) {
         if (search[i] !== " ") {
@@ -30,10 +26,21 @@ export default function Search() {
           !keyWords.includes(currentKeyWord) && keyWords.push(currentKeyWord);
         }
       }
-
-      dispatch(changeSearch({ search: keyWords }));
+      let foundBiggerKeyWord = false;
+      for (let i = 0; i < keyWords.length; i++) {
+        if (keyWords[i].length > 8) {
+          window.alert(
+            "Each keyword of your search must have a maximum of 8 characters."
+          );
+          foundBiggerKeyWord = true;
+          dispatch(changeSearch({ search: [] }));
+        }
+        if (i === keyWords.length - 1 && foundBiggerKeyWord === false) {
+          dispatch(changeSearch({ search: keyWords }));
+        }
+      }
     } else if (!search) {
-      dispatch(changeSearch({ search: "" }));
+      dispatch(changeSearch({ search: [] }));
     }
   };
 
@@ -44,7 +51,7 @@ export default function Search() {
         location.pathname === "/" ? { display: "flex" } : { display: "none" }
       }
     >
-      <img src={require("../assets/promotion.png")} alt="" />
+      <img src={require("../assets/search.png")} alt="" />
       <input
         type="text"
         name=""

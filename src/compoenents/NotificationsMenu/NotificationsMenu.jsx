@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./NotificationsMenu.module.css";
 import { AnimationContainer } from "./AnimationContainer.styled";
 import { useSelector } from "react-redux";

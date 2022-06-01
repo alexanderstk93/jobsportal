@@ -52,6 +52,7 @@ export default function FormExperience({
           jobDescription: jobDescriptionForm.current.value,
         })
       );
+      dispatch(switchChangesSaved(true));
     } else {
       window.alert("Every field must pe completed.");
     }
