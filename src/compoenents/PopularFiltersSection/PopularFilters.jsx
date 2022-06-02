@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addKeyWord } from "../store/StatusSlice";
 import styles from "./PopularFilters.module.css";
 import { PopularFiltersArray } from "./PopularFiltersStore";
@@ -22,7 +22,7 @@ export default function PopularFilters() {
   return (
     <div
       className={styles.container}
-      style={width >= 1020 ? { display: "block" } : { display: "none" }}
+      style={width >= 1020 ? { display: "flex" } : { display: "none" }}
     >
       <h2>Popular Filters:</h2>
       <ul>{loadPopularFiltersAsLi()}</ul>

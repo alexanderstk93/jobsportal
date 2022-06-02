@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import Search from "./Search";
 import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -19,8 +20,8 @@ export default function Navbar() {
   const visibleNotificationsHandler = () => {
     setIsActive((state) => !state);
   };
-  const [width, setWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => setWidth(window.innerWidth));
+
+  const width = useSelector((state) => state.status.width);
 
   return (
     <div className={styles.wrapper}>
@@ -39,7 +40,7 @@ export default function Navbar() {
           <Link className={styles.logo} to="/">
             <img src={require("../assets/logo.png")} alt="" />
           </Link>
-          {width <= 1000 && <HamburgerMenu />}
+          {width <= 1000 ? <HamburgerMenu /> : null}
         </div>
         <div className={styles["search-container"]}>
           <Search />

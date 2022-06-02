@@ -41,6 +41,7 @@
   display: block;
   animation: right-to-left 3s;
   z-index: 3;
+  margin-top: -3.5rem;
 }
 
 @keyframes right-to-left {

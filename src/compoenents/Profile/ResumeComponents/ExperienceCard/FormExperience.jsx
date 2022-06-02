@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./FormExperience.module.css";
 import { useDispatch } from "react-redux";
 import { useRef, useState } from "react";
@@ -21,7 +21,9 @@ export default function FormExperience({
   description,
   newExperience,
 }) {
+  
   const dispatch = useDispatch();
+
   const jobNameForm = useRef("");
   const companyNameForm = useRef("");
   const cityForm = useRef("");

@@ -1,10 +1,23 @@
 import "./App.css";
 import Main from "./compoenents/main/Main";
-import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setWitdth } from "./compoenents/store/StatusSlice";
+import { useCallback } from "react";
+import { Router, Routes, Route } from "react-router-dom";
+import Navbar from "./compoenents/navigation/Navbar";
+import Notification from "./compoenents/MiniComponents/Notification";
+import AdminDashboard from "./compoenents/Admin/AdminDashboard";
+import Profile from "./compoenents/Profile/Profile";
+import JobView from "./compoenents/jobview/JobView";
+import TopEmployerDescription from "./compoenents/topEmployer/TopEmployerDescription";
 
 function App() {
   // const [width, setWidth] = useState(window.innerWidth);
   // window.addEventListener("resize", () => setWidth(window.innerWidth));
+  const dispatch = useDispatch();
+  window.addEventListener("resize", () =>
+    dispatch(setWitdth(window.innerWidth))
+  );
 
   return (
     // <div className="App">
@@ -24,7 +37,19 @@ function App() {
     //   )}
     // </div>
     <div className="App">
-      <Main />
+      <Navbar />
+      <Notification />
+      <Routes>
+        <Route path={"/"} element={<Main />} />
+        <Route path={"/admin"} element={<AdminDashboard />} />
+        <Route path={"/jobview/:jobId"} element={<JobView />} />
+        <Route path={"/topemployer"} element={<TopEmployerDescription />} />
+        <Route path={"/profile"} element={<Profile />} />
+        <Route
+          path="*"
+          element={<h1>Page not found. Maybe check your request..?</h1>}
+        />
+      </Routes>
     </div>
   );
 }

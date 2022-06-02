@@ -105,7 +105,8 @@
 
 @media only screen and (max-width: 1020px) {
   .apply-button {
-    width: 80%;
+    font-size: 0.8rem;
+    width: 60%;
     text-align: center;
   }
 
@@ -119,5 +120,16 @@
 
   .apply-button:focus {
     background-color: rgb(83, 77, 246);
+  }
+
+  .employer {
+    font-size: 1rem;
+  }
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .skill {
+    font-size: 0.7rem;
   }
 }

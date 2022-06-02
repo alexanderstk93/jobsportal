@@ -16,9 +16,9 @@ export default function Main() {
       dispatch(setIntroStatus(true));
     }, 5000);
   }
-  const [width, setWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => setWidth(window.innerWidth));
-  console.log(width);
+
+  const width = useSelector((state) => state.status.width);
+
   return (
     <div className={styles.main}>
       {!introLoaded && <WelcomeSlider />}

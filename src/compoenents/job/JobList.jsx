@@ -38,7 +38,6 @@ export default function JobList() {
           ? true
           : false
       );
-      console.log(citiesFilters);
       // FILTER JOB FOR SEARCH FILTERS
       const filterJobToMatchSearchFilters = (job) => {
         for (let searchFilter of searchFilters) {

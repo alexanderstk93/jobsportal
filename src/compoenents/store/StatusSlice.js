@@ -6,7 +6,7 @@ const initialState = {
   appliedTo: "",
   search: [],
   introStatus: false,
-  
+  width: window.innerWidth,
 };
 
 export const statusSlice = createSlice({
@@ -45,6 +45,9 @@ export const statusSlice = createSlice({
     setIntroStatus: (state, action) => {
       state.introStatus = true;
     },
+    setWitdth: (state, action) => {
+      state.width = action.payload;
+    },
   },
 });
 
@@ -56,5 +59,6 @@ export const {
   deleteKeyWord,
   addKeyWord,
   setIntroStatus,
+  setWitdth,
 } = statusSlice.actions;
 export default statusSlice.reducer;

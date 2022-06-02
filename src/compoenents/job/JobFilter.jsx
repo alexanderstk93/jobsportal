@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { deleteKeyWord, addKeyWord, changeSearch } from "../store/StatusSlice";
+import { deleteKeyWord, addKeyWord } from "../store/StatusSlice";
 import FilterCard from "./FilterCard";
 import FilterOptionsCard from "./FilterOptionsCard";
 import styles from "./JobFilter.module.css";
@@ -21,6 +21,7 @@ export default function JobFilter() {
   const addKeyWordHandler = (keyWord) => {
     dispatch(addKeyWord({ keyWord: keyWord.toLowerCase() }));
   };
+
   const loadKeyWordsList = () => {
     const liElements = keyWords.map((keyWord) => (
       <li onClick={() => deleteKeyWordHandler(keyWord)} key={Math.random()}>
@@ -30,11 +31,11 @@ export default function JobFilter() {
     return liElements;
   };
 
-  const [width, setWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => setWidth(window.innerWidth));
+  const width = useSelector((state) => state.status.width);
+  console.log(width);
 
   return (
-    <div className={width <= 1000 ? styles.mobile : styles.container}>
+    <div className={width <= 1020 ? styles.mobile : styles.container}>
       <h2>
         <i>Filter</i>
       </h2>

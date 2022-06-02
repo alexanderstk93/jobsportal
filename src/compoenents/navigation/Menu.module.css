@@ -2,11 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 120%;
-  height: 120%;
   background-color: white;
   z-index: 5;
-
   border-radius: 0 0 50rem 0;
   animation: slide-down 0.5s;
   animation-fill-mode: forwards;
@@ -18,7 +15,7 @@
     height: 0;
   }
   to {
-    width: 120%;
-    height: 120%;
+    width: 130%;
+    height: 130%;
   }
 }

@@ -28,7 +28,7 @@ export default function Search() {
       }
       let foundBiggerKeyWord = false;
       for (let i = 0; i < keyWords.length; i++) {
-        if (keyWords[i].length > 8) {
+        if (keyWords[i].length > 12) {
           window.alert(
             "Each keyword of your search must have a maximum of 8 characters."
           );

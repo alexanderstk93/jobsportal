@@ -3,11 +3,12 @@ import styles from "./HamburgerMenu.module.css";
 import Menu from "./Menu";
 
 export default function HamburgerMenu() {
-  const [isMenuActive, setIsMenuActive] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState();
 
   const setInactiveMenu = () => {
     setIsMenuActive(false);
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.bars} onClick={() => setIsMenuActive(true)}>

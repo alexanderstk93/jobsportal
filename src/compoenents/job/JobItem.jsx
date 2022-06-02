@@ -128,7 +128,11 @@ export default function JobItem({
         }
       >
         {long ? <h1>Full Description</h1> : null}
-        {long ? description : description.slice(0, 250) + "..."}
+        {long
+          ? description
+          : width >= 1020
+          ? description.slice(0, 250) + "..."
+          : description.slice(0, 150) + "..."}
       </div>
       {/* Apply Button */}
       <div className={styles.apply}>

@@ -18,19 +18,7 @@ root.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
-        <Navbar />
-        <Notification />
-        <Routes>
-          <Route path={"/"} element={<App />} />
-          <Route path={"/admin"} element={<AdminDashboard />} />
-          <Route path={"/jobview/:jobId"} element={<JobView />} />
-          <Route path={"/topemployer"} element={<TopEmployerDescription />} />
-          <Route path={"/profile"} element={<Profile />} />
-          <Route
-            path="*"
-            element={<h1>Page not found. Maybe check your request..?</h1>}
-          />
-        </Routes>
+        <App />
       </Router>
     </React.StrictMode>
   </Provider>
