@@ -2,8 +2,7 @@ import "./App.css";
 import Main from "./compoenents/main/Main";
 import { useDispatch } from "react-redux";
 import { setWitdth } from "./compoenents/store/StatusSlice";
-import { useCallback } from "react";
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./compoenents/navigation/Navbar";
 import Notification from "./compoenents/MiniComponents/Notification";
 import AdminDashboard from "./compoenents/Admin/AdminDashboard";
@@ -12,8 +11,6 @@ import JobView from "./compoenents/jobview/JobView";
 import TopEmployerDescription from "./compoenents/topEmployer/TopEmployerDescription";
 
 function App() {
-  // const [width, setWidth] = useState(window.innerWidth);
-  // window.addEventListener("resize", () => setWidth(window.innerWidth));
   const dispatch = useDispatch();
   window.addEventListener("resize", () =>
     dispatch(setWitdth(window.innerWidth))

@@ -12,7 +12,7 @@
   width: 100%;
   top: 0;
   z-index: 5;
-  opacity: 96%;
+  opacity: 100%;
   position: fixed;
 }
 
@@ -44,17 +44,16 @@
   font-weight: bolder;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
   .left-nav img {
     display: none;
-    flex: 20%;
+    flex: 15%;
   }
   .search-container {
-    flex: 80%;
+    flex: 50%;
   }
   .right-nav {
-    display: none;
-    flex: 0;
+    flex: 15%;
   }
   .admin {
     display: none;

@@ -23,6 +23,8 @@ export default function Notification() {
   const appliedTo = useSelector((state) => state.status.appliedTo);
   const changesSaved = useSelector((state) => state.status.changesSaved);
 
+  const width = useSelector((state) => state.status.width);
+
   if (applied) {
     setTimeout(() => {
       dispatch(changeStatus(false));
@@ -47,8 +49,12 @@ export default function Notification() {
         >
           <img src={require("../assets/check.png")} alt="check" />
           <div className={styles.info}>
-            <p>{applied && "Succesfully applied."}</p>
-            <p>{changesSaved && "Changes saved succesfully."}</p>
+            <p>
+              <i>{applied && "Succesfully applied."}</i>
+            </p>
+            <p>
+              <i>{changesSaved && "Changes saved succesfully."}</i>
+            </p>
             {applied ? <h3>{appliedTo}</h3> : null}
           </div>
         </div>
@@ -56,7 +62,9 @@ export default function Notification() {
       <div
         className={styles.bar}
         style={
-          applied || changesSaved ? { display: "block" } : { display: "none" }
+          (applied || changesSaved) && width >= 1020
+            ? { display: "block" }
+            : { display: "none" }
         }
       ></div>
     </>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./HamburgerMenu.module.css";
 import Menu from "./Menu";
+import Navigation from "./Navigation";
 
 export default function HamburgerMenu() {
   const [isMenuActive, setIsMenuActive] = useState();

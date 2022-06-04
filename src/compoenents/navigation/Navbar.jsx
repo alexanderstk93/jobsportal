@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link className={styles.logo} to="/">
             <img src={require("../assets/logo.png")} alt="" />
           </Link>
-          {width <= 1000 ? <HamburgerMenu /> : null}
+          {width <= 1020 ? <HamburgerMenu /> : null}
         </div>
         <div className={styles["search-container"]}>
           <Search />

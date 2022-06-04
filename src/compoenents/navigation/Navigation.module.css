@@ -41,8 +41,37 @@
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
   .navigation {
+    justify-content: space-around;
+  }
+  /* .profile a {
     color: black;
+  }
+
+  .notifications p {
+    font-size: 1.2rem;
+    color: black;
+  } */
+
+  .navigation img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile img {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .notifications {
+    display: block;
+  }
+  .notifications img {
+    margin-right: 0;
+  }
+
+  .profile {
+    display: block;
   }
 }

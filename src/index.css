@@ -12,13 +12,25 @@ body {
   color: white;
 }
 
+@media only screen and (max-width: 1020px) {
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 0.5rem;
+  }
+}
+
 /* body,
 html {
   overflow-x: hidden;
 } */
 /* 
 THIS MUST BE USED TO WORK 'OVERFLOW-X HIDDEN' AND RESOLVE A BUG WITCH COULD NOT LET HTML 
-TAG TO CUPPY THE ENTIRE WIDTH */
+TAG TO OCUPPY THE ENTIRE WIDTH */
 
 #root {
   position: absolute;

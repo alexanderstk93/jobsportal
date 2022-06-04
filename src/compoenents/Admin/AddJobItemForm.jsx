@@ -24,7 +24,9 @@ export default function AddJobItemForm() {
   const [juniorChecked, setJunior] = useState(false);
   const [middleChecked, setMiddle] = useState(false);
   const [seniorChecked, setSenior] = useState(false);
+
   let latLongFromLocation = "";
+  console.log(latLongFromLocation);
   Geocode.setApiKey("AIzaSyDD9GO4BaG6xAQxa3WDZmiJhFhRBFrFqco");
   Geocode.setLanguage("en");
   if (location.current.value)

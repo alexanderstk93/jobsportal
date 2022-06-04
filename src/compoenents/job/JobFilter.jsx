@@ -32,7 +32,6 @@ export default function JobFilter() {
   };
 
   const width = useSelector((state) => state.status.width);
-  console.log(width);
 
   return (
     <div className={width <= 1020 ? styles.mobile : styles.container}>

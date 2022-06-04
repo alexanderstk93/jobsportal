@@ -15,7 +15,7 @@
   flex: 2;
 } */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
   .main {
     width: 100%;
     padding: 1rem;

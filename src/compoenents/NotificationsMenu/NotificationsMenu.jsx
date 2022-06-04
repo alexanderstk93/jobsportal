@@ -16,7 +16,7 @@ export default function NotificationsMenu({ isActive }) {
           </h3>
           <div className={styles["message-and-time"]}>
             <p>{notification.message}</p>
-            <span>
+            <span className={styles.time}>
               <i>{notification.time}</i>
             </span>
           </div>
@@ -30,7 +30,7 @@ export default function NotificationsMenu({ isActive }) {
     <AnimationContainer
       style={isActive ? { display: "block" } : { display: "none" }}
     >
-      {loadNotifications()}
+      <div className={styles.notifications}>{loadNotifications()}</div>
     </AnimationContainer>
   );
 }

@@ -21,8 +21,8 @@ export default function Main() {
 
   return (
     <div className={styles.main}>
-      {!introLoaded && <WelcomeSlider />}
-      <div className={styles.left}>{width >= 1020 && <JobFilter />}</div>
+      {/* {!introLoaded && <WelcomeSlider />} */}
+      <div className={styles.left}>{width >= 1022 && <JobFilter />}</div>
       <div className={styles.mid}>
         <PopularFilters />
         <JobList />
