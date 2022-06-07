@@ -1,6 +1,12 @@
 .container {
   cursor: pointer;
+  width: 100%;
+}
 
+.container img {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
 }
 .bar {
   background-color: rgb(143, 140, 249);

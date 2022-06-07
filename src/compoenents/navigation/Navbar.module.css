@@ -45,12 +45,12 @@
 }
 
 @media only screen and (max-width: 1020px) {
-  .left-nav img {
+  .logo {
     display: none;
     flex: 15%;
   }
   .search-container {
-    flex: 50%;
+    flex: 55%;
   }
   .right-nav {
     flex: 15%;

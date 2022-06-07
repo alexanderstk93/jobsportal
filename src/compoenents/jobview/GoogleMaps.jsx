@@ -22,7 +22,7 @@ export default function GoogleMaps({ lat, lng, showLocation }) {
           center={center}
           zoom={zoomLevel}
           mapContainerStyle={{
-            width: "370px",
+            width: "auto",
             height: "320px",
             borderRadius: "1rem",
           }}

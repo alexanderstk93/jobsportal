@@ -8,3 +8,9 @@
 .clickable {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1020px) {
+  .container {
+    font-size: 0.8rem;
+  }
+}

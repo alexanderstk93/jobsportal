@@ -64,3 +64,30 @@
   background-color: rgb(108, 203, 229);
   color: black;
 }
+
+@media only screen and (max-width: 1020px) {
+  .profile-image-container img {
+    width: 150px;
+    height: 150px;
+  }
+  .informations-container p {
+    font-size: 1rem;
+  }
+  .profile-image-container h2 {
+    margin-top: 1rem;
+  }
+  .profile-image-container h2 {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 0;
+  }
+
+  .edit-profile {
+    font-size: 1rem;
+  }
+
+  .edit-profile {
+    width: 50%;
+  }
+}

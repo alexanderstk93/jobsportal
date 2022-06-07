@@ -7,6 +7,10 @@ import { useState } from "react";
 export default function Menu({ setInactiveMenu }) {
   const [filterShow, setFilterShow] = useState(false);
 
+  setTimeout(() => {
+    setFilterShow(true);
+  }, 100);
+
   return (
     <div className={styles.menu}>
       <button
@@ -18,10 +22,7 @@ export default function Menu({ setInactiveMenu }) {
       >
         X
       </button>
-      <Navigation />
-      {setTimeout(() => {
-        setFilterShow(true);
-      }, 100)}
+
       {filterShow && <JobFilter />}
     </div>
   );

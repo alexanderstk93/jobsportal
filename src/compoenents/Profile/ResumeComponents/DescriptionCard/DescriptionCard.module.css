@@ -2,3 +2,9 @@
   margin-bottom: 1rem;
   text-align: justify;
 }
+
+@media only screen and (max-width: 1020px) {
+  .description {
+    font-size: 0.8rem;
+  }
+}

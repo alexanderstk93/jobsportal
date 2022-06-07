@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NotificationsMenu from "../NotificationsMenu/NotificationsMenu";
 import styles from "./Navbar.module.css";
 import Navigation from "./Navigation";
@@ -20,6 +20,7 @@ export default function Navbar() {
   const visibleNotificationsHandler = () => {
     setIsActive((state) => !state);
   };
+  const currentLocation = useLocation();
 
   const width = useSelector((state) => state.status.width);
 
@@ -38,9 +39,15 @@ export default function Navbar() {
         </div>
         <div className={styles["left-nav"]}>
           <Link className={styles.logo} to="/">
-            <img src={require("../assets/logo.png")} alt="" />
+            <img
+              className={styles.logo}
+              src={require("../assets/logo.png")}
+              alt=""
+            />
           </Link>
-          {width <= 1020 ? <HamburgerMenu /> : null}
+          {width <= 1020 && currentLocation.pathname === "/" ? (
+            <HamburgerMenu />
+          ) : null}
         </div>
         <div className={styles["search-container"]}>
           <Search />

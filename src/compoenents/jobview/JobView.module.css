@@ -36,3 +36,20 @@
   margin-bottom: 1rem;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1020px) {
+  .jobview {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .job-selected {
+    width: 100%;
+  }
+
+  .informations-container {
+    margin: 3rem auto;
+    width: 100%;
+  }
+}

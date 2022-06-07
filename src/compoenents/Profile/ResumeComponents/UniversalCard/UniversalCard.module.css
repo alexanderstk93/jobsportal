@@ -25,3 +25,9 @@
 .topbar img:hover {
   background-color: rgb(28, 176, 217);
 }
+
+@media only screen and (max-width: 1020px) {
+  .container {
+    margin-bottom: 0.5rem;
+  }
+}

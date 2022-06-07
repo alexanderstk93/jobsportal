@@ -12,11 +12,11 @@ export default function HamburgerMenu() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.bars} onClick={() => setIsMenuActive(true)}>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-      </div>
+      <img
+        src={require("../assets/filter (2).png")}
+        alt="dsadsa"
+        onClick={() => setIsMenuActive(true)}
+      />
       <div className={styles.menu}>
         {isMenuActive && <Menu setInactiveMenu={setInactiveMenu} />}
       </div>

@@ -18,3 +18,11 @@
 }
 .posts {
 }
+
+@media only screen and (max-width: 1020px) {
+  .container {
+    font-size: 0.8rem;
+    width: 45%;
+    position: relative;
+  }
+}

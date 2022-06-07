@@ -130,6 +130,16 @@
   }
 
   .skill {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .skill-level.long {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+  }
+  .topEmployer {
+    margin-left: 1rem;
   }
 }
