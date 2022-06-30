@@ -6,6 +6,8 @@ const initialState = {
   position: "Actor",
   phoneNumber: "0772 651 397",
   email: "dwaynejohnson@contact.com",
+  profileImage:
+    "https://upload.wikimedia.org/wikipedia/commons/8/8e/Dwayne_Johnson_at_the_2009_Tribeca_Film_Festival_2.jpg",
   description:
     "Dwayne Douglas Johnson, also known by his ring name The Rock, is an American actor, businessman, and former professional wrestler. Widely regarded as one of the greatest professional wrestlers of all time, he wrestled for WWE for eight years prior to pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide, making him one of the world's highest-grossing and highest-paid actors.",
   workExperience: [
@@ -160,6 +162,15 @@ const resumeSlice = createSlice({
         (language) => language.language !== action.payload
       );
     },
+    editProfileInfo: (state, action) => {
+      if (action.payload.name) state.name = action.payload.name;
+      if (action.payload.position) state.position = action.payload.position;
+      if (action.payload.phoneNumber)
+        state.phoneNumber = action.payload.phoneNumber;
+      if (action.payload.email) state.email = action.payload.email;
+      if (action.payload.profileImage)
+        state.profileImage = action.payload.profileImage;
+    },
   },
 });
 export const {
@@ -173,5 +184,6 @@ export const {
   removeAbility,
   addLanguage,
   removeLanguage,
+  editProfileInfo,
 } = resumeSlice.actions;
 export default resumeSlice.reducer;

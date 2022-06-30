@@ -7,13 +7,14 @@ export default function FilterCard({
   height,
   padding,
   flex,
-  minHeight,
+  maxHeight,
 }) {
   const customStyles = {
     height: height,
     padding: padding,
     display: flex ? "flex" : null,
-    minHeight: minHeight,
+    maxHeight: maxHeight,
+    "overflow-y": maxHeight && "scroll",
   };
 
   const width = useSelector((state) => state.status.width);

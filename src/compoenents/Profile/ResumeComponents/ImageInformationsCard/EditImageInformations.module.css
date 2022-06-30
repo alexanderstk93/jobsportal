@@ -1,0 +1,49 @@
+.form {
+  width: 95%;
+}
+
+.inputContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer input {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+  background-color: rgb(99, 100, 101);
+  color: white;
+}
+.inputContainer input:focus {
+  outline-style: solid;
+  outline-color: rgb(127, 255, 212);
+}
+.inputContainer label {
+  font-size: 1.1rem;
+  font-style: italic;
+  width: 100%;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: aquamarine;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.submit img {
+  margin-left: 0.3rem;
+}

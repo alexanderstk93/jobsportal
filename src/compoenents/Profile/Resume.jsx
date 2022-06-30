@@ -18,7 +18,7 @@ export default function Resume() {
         <ResumeVisibilityCard />
       </div>
       <div className={styles["right-side"]}>
-        <ResumeLanguageBar />
+        {/* <ResumeLanguageBar /> */}
         <DescriptionCard />
         <ExperienceCard />
         <StudyCard />

@@ -1,6 +1,7 @@
 .input-container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .input-container input {
@@ -15,6 +16,25 @@
   border-radius: 0.2rem;
   cursor: pointer;
 }
+
+.checkboxImg {
+  position: absolute;
+  pointer-events: none;
+  width: auto;
+  color: black;
+}
+/* .checkboxImg svg {
+  animation: pop-in 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes pop-in {
+  from {
+    transform: rotateX(100deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+} */
 
 .input-container input:hover {
   background-color: rgb(153, 150, 252);

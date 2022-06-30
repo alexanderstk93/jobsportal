@@ -39,11 +39,8 @@ export default function Navbar() {
         </div>
         <div className={styles["left-nav"]}>
           <Link className={styles.logo} to="/">
-            <img
-              className={styles.logo}
-              src={require("../assets/logo.png")}
-              alt=""
-            />
+            <img src={require("../assets/connection.png")} alt="" />
+            <h1>jobsportal</h1>
           </Link>
           {width <= 1020 && currentLocation.pathname === "/" ? (
             <HamburgerMenu />

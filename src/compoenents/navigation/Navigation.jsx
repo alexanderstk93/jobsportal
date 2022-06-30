@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 export default function Navigation({ visibleNotificationsHandler }) {
   const width = useSelector((state) => state.status.width);
 
-  const profileImage = require("../assets/therock.jpg");
+  const profileImage = useSelector((state) => state.resume.profileImage);
   const currentLocation = useLocation();
 
   return (

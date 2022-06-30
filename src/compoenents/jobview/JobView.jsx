@@ -54,7 +54,7 @@ export default function JobView() {
                 others
               />
               <h2 className={styles["other-jobs-message"]}>
-                <i> Other Jobs from this Employer</i>
+                <i>Other Jobs from this Employer</i>
               </h2>
             </div>
 
