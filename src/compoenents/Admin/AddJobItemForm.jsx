@@ -27,7 +27,7 @@ export default function AddJobItemForm() {
 
   let latLongFromLocation = "";
   console.log(latLongFromLocation);
-  Geocode.setApiKey("AIzaSyDD9GO4BaG6xAQxa3WDZmiJhFhRBFrFqco");
+  Geocode.setApiKey(process.env.GEOLOCATION_API_KEY);
   Geocode.setLanguage("en");
   if (location.current.value)
     Geocode.fromAddress(location.current.value).then(
