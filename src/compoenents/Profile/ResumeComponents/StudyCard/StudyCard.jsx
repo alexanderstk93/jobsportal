@@ -17,6 +17,7 @@ export default function StudyCard() {
     const studiesAsStudyCard = studies.map((study) => (
       <>
         <Study
+          key={Math.random()}
           university={study.university}
           start={study.start}
           end={study.end}
@@ -25,7 +26,6 @@ export default function StudyCard() {
         {studies.length > 1 ? <div className={styles.lineBreak}></div> : null}
       </>
     ));
-    console.log(studies);
     return studiesAsStudyCard;
   };
 

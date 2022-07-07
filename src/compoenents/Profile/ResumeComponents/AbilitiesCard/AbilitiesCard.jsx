@@ -12,7 +12,7 @@ export default function AbilitiesCard() {
 
   const loadAbilities = () => {
     const abilityItems = abilities.map((ability) => {
-      return <Ability>{ability}</Ability>;
+      return <Ability key={Math.random()}>{ability}</Ability>;
     });
     return abilityItems;
   };

@@ -24,7 +24,6 @@ export default function Resume() {
         <StudyCard />
         <AbilitiesCard />
         <LanguagesCard />
-        <AddSectionCard />
       </div>
     </div>
   );

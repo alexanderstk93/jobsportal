@@ -8,7 +8,7 @@ export default function NotificationsMenu({ isActive }) {
 
   const loadNotifications = () => {
     const notifications = getNotifications.map((notification) => (
-      <div className={styles.notification}>
+      <div key={Math.random()} className={styles.notification}>
         <img src={require("../assets/chat.png")} alt="" />
         <div className={styles.details}>
           <h3>

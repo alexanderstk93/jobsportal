@@ -13,7 +13,9 @@ export default function LanguagesCard() {
 
   const loadLanguages = () => {
     const languagesAsCard = languages.map((language) => (
-      <LanguageCard level={language.level}>{language.language}</LanguageCard>
+      <LanguageCard key={Math.random()} level={language.level}>
+        {language.language}
+      </LanguageCard>
     ));
     return languagesAsCard;
   };

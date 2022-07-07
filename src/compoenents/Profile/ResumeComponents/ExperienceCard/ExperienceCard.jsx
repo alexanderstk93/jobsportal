@@ -21,6 +21,7 @@ export default function ExperienceCard() {
       return (
         <>
           <ExperienceContainer
+            key={Math.random()}
             jobName={experience.jobName}
             companyName={experience.companyName}
             city={experience.city}
